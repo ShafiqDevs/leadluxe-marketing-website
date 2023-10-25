@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import ListItem from '../ui/ListItem';
 import { BsCheck2 } from 'react-icons/bs';
+import { v4 as uuidv4 } from 'uuid';
 
 type Props = {
 	flexDirection: 'column' | 'row';
@@ -14,6 +15,7 @@ const ListContainer = ({ flexDirection, items }: Props) => {
 			className='flex mx-auto lg:mx-0 justify-start items-start flex-wrap flex-col  lg:flex-row  text-center gap-3'>
 			{items.map((item) => (
 				<ListItem
+					key={uuidv4()}
 					icon={<BsCheck2 />}
 					iconClassnames='text-2xl text-accent'
 					text={item}

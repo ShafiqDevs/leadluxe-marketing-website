@@ -42,7 +42,7 @@ const ReviewCard = ({ profile, review }: Props) => {
 					<AiFillStar />
 				</span>
 			</div>
-			<p className='max-w-xs'>"{review}"</p>
+			<p className='max-w-xs'>&quot;{review}&quot;</p>
 		</div>
 	);
 };

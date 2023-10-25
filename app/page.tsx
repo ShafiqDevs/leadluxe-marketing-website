@@ -10,7 +10,8 @@ import AutomatedIcon from './components/icons/AutomatedIcon';
 import CalendarIcon from './components/icons/CalendarIcon';
 import FloatingImageWithLink from './components/containers/FloatingImageWithLink';
 import ReviewCard from './components/ui/ReviewCard';
-import Carousel from './components/icons/Carousel';
+import DraggableCarousel from './components/containers/DraggableCarousel';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {
 	return (
@@ -201,7 +202,7 @@ export default function Home() {
 				<div className='flex flex-col w-full h-fit text-center bg-secondary p-24 rounded-lg'>
 					<h3 className='text-3xl'>Why us</h3>
 					<h2 className='text-4xl font-semibold'>
-						Put us to work. Generate results while you're relaxing
+						Put us to work. Generate results while you are relaxing
 					</h2>
 				</div>
 			</Section>
@@ -243,9 +244,10 @@ export default function Home() {
 			</Section>
 
 			<Section id='section-testimonials'>
-				<Carousel
-					items={[
+				<DraggableCarousel
+					carousel_items={[
 						<ReviewCard
+							key={uuidv4()}
 							profile={{
 								imgUrl: '',
 								name: 'shafiq belaroussi',
@@ -255,6 +257,7 @@ export default function Home() {
 					leads started flowing in. Their approach is very effective'
 						/>,
 						<ReviewCard
+							key={uuidv4()}
 							profile={{
 								imgUrl: '',
 								name: 'shafiq belaroussi',
@@ -264,6 +267,7 @@ export default function Home() {
 				leads started flowing in. Their approach is very effective'
 						/>,
 						<ReviewCard
+							key={uuidv4()}
 							profile={{
 								imgUrl: '',
 								name: 'shafiq belaroussi',
@@ -273,6 +277,7 @@ export default function Home() {
 			leads started flowing in. Their approach is very effective'
 						/>,
 						<ReviewCard
+							key={uuidv4()}
 							profile={{
 								imgUrl: '',
 								name: 'shafiq belaroussi',
@@ -281,100 +286,8 @@ export default function Home() {
 							review='I managed to hire my friend to help in the business after the
 		leads started flowing in. Their approach is very effective'
 						/>,
-					]}>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-			leads started flowing in. Their approach is very effective'
-					/>
-				</Carousel>
-				{/* <div className='flex flex-col md:flex-row gap-8'>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-					leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-					leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-					leads started flowing in. Their approach is very effective'
-					/>
-					<ReviewCard
-						profile={{
-							imgUrl: '',
-							name: 'shafiq belaroussi',
-							title: 'CEO, Sigma marketing',
-						}}
-						review='I managed to hire my friend to help in the business after the
-					leads started flowing in. Their approach is very effective'
-					/>
-				</div> */}
+					]}
+				/>
 			</Section>
 		</main>
 	);
