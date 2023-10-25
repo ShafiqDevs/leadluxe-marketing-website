@@ -1,113 +1,381 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Section from './components/containers/Section';
+import ListContainer from './components/containers/ListContainer';
+import BGCircle from './components/ui/BGCircle';
+import FloatingImageWithText from './components/containers/FloatingImageWithText';
+import FeatureItem from './components/containers/FeatureItem';
+import { BsGraphUpArrow } from 'react-icons/bs';
+import SalesUpIcon from './components/icons/SalesUpIcon';
+import AutomatedIcon from './components/icons/AutomatedIcon';
+import CalendarIcon from './components/icons/CalendarIcon';
+import FloatingImageWithLink from './components/containers/FloatingImageWithLink';
+import ReviewCard from './components/ui/ReviewCard';
+import Carousel from './components/icons/Carousel';
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className=' min-h-screen'>
+			<Section id='section-hero'>
+				<div className='grid grid-flow-row lg:grid-flow-col lg:grid-cols-7 items-center w-full h-full gap-y-16 lg:gap-x-4'>
+					{/* hero header */}
+					<div className='col-span-3 flex flex-col items-start gap-5 '>
+						<div className='flex flex-col items-center lg:items-start text-center lg:text-left gap-3'>
+							<h1 className='text-5xl font-extrabold w-full'>
+								Grow your customer base and be ahead of the
+								competition
+							</h1>
+							<p className='text-2xl'>
+								By leveraging the latest cutting technology and social
+								media marketing
+							</p>
+						</div>
+						<button className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/30'>
+							GET FREE CONSULTATION
+						</button>
+						<ListContainer
+							flexDirection='row'
+							items={[
+								'High sales',
+								'Earn your time back',
+								'Automated process',
+							]}
+						/>
+					</div>
+					{/* hero image */}
+					<div className='col-span-4 flex justify-center lg:justify-end items-center w-full h-full '>
+						<div className='relative flex justify-center items-center w-[95%] lg:w-[512px] aspect-square bg-gradient-to-r from-primary/50 to-secondary/50 rounded-tl-[50%] rounded-r-[5%] rounded-bl-[5%] rounded-br-[15%] p-2 mr-7'>
+							<Image
+								className='w-full h-full object-cover rounded-tl-[50%] rounded-r-[5%] rounded-bl-[5%] rounded-br-[15%]'
+								alt='hero Image'
+								src={'/ads images/sales.jpg'}
+								width={656.8}
+								height={448}
+							/>
+							<Image
+								className='absolute object-cover w-64 aspect-auto shadow-md shadow-text/20 rounded-xl right-0 lg:-right-7 top-0
+								'
+								alt='new leads flow with sigma marketing'
+								src={'/ads images/new_leads_ad.png'}
+								width={1024}
+								height={423.06}
+							/>
+							<Image
+								className='absolute object-cover w-52 aspect-auto shadow-md shadow-text/20 rounded-xl left-0 lg:-left-7 bottom-0
+								'
+								alt='excellence of stats with sigma marketing'
+								src={'/ads images/stats_ad.png'}
+								width={512}
+								height={593.32}
+							/>
+						</div>
+					</div>
+				</div>
+			</Section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<Section id='section-partners'>
+				<div className='flex justify-center w-full py-5 bg-secondary/30 rounded-md '>
+					<div className='flex flex-col lg:flex-row flex-wrap gap-8 justify-center items-center w-fit h-fit'>
+						{/* image 1 */}
+						<div className='flex items-center w-full lg:w-fit gap-3'>
+							<Image
+								className='w-28 aspect-auto'
+								alt='Brand logo - Overnightly working with sigma marketing'
+								src={'/partners logos/Brand logo - Overnightly.png'}
+								width={339}
+								height={106}
+							/>
+							<div className='flex flex-col'>
+								<span className='text-text text-2xl'>
+									Overnightly
+								</span>
+							</div>
+						</div>
+						{/* image 2 */}
+						<div className='flex items-center w-full lg:w-fit gap-3'>
+							<Image
+								className='w-28 aspect-auto'
+								alt='Brand logo - Parallel Portals working with sigma marketing'
+								src={
+									'/partners logos/Brand logo - Parallel Portals.png'
+								}
+								width={339}
+								height={106}
+							/>
+							<div className='flex flex-col'>
+								<span className='text-text text-2xl'>
+									Parallel Portals
+								</span>
+								<span className='text-text text-base'>
+									Digital Art
+								</span>
+							</div>
+						</div>
+						{/* image 3 */}
+						<div className='flex items-center w-full lg:w-fit gap-3'>
+							<Image
+								className='w-28 aspect-auto'
+								alt='Brand logo - Prim ShortStays working with sigma marketing'
+								src={
+									'/partners logos/Brand logo - Prim ShortStays.png'
+								}
+								width={339}
+								height={106}
+							/>
+							<div className='flex flex-col'>
+								<span className='text-text text-2xl'>
+									Prim ShortStays
+								</span>
+								<span className='text-text text-base'></span>
+							</div>
+						</div>
+						{/* image 4 */}
+						<div className='flex items-center w-full lg:w-fit gap-3'>
+							<Image
+								className='w-28 aspect-auto'
+								alt='Brand logo - WizardTools working with sigma marketing'
+								src={'/partners logos/Brand logo - WizardTools.png'}
+								width={339}
+								height={106}
+							/>
+							<div className='flex flex-col'>
+								<span className='text-text text-2xl'>
+									Wizard Tools
+								</span>
+								<span className='text-text text-base'>
+									Play Smart
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</Section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+			<Section id='section-ad-copy-1'>
+				<div className='flex flex-col gap-24'>
+					{/* ad section 1 */}
+					<FloatingImageWithText
+						imageFloats='Left'
+						content={{
+							Heading:
+								'You have a brilliant plan.. And you need to generate new connections, leads and exposure?',
+							subHeading: 'Then this is definitely what you need',
+							paragraph:
+								"You realise that working 'in the business' to continuously improve your product or service and trying to optimise your conversions, learning new strategies and staying on top of the trends is impossible without support",
+						}}
+					/>
+					{/* ad section 2 */}
+					<FloatingImageWithText
+						imageFloats='Right'
+						content={{
+							Heading:
+								'If this ONE thing can help your competitors 10X their revenue when executed correctly..',
+							subHeading: 'It certainly can help your business too',
+							paragraph:
+								'The potential of social media reach through paid ads is massive and a lot of businesses in your niche are ignoring it due to lack of knowledge. Social media platforms have millions of users that are active everyday and with the right strategy you can tap into this large pool of users and monetise this reach and achieve high profits.',
+						}}
+					/>
+				</div>
+			</Section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+			<Section id='section-benefits'>
+				<div className='flex flex-col lg:flex-row lg:items-start items-center gap-4 w-full'>
+					<FeatureItem
+						icon={<SalesUpIcon />}
+						Title='High Sales'
+						text='Increased sales through improved customer experience journey designed to convert'
+					/>
+					<FeatureItem
+						icon={<AutomatedIcon />}
+						Title='Automated process'
+						text='Leverage the power of AI tools and social media technologies '
+					/>
+					<FeatureItem
+						icon={<CalendarIcon />}
+						Title='Earn back your time'
+						text='Let our team take care of the time consuming tasks and allow you to work on your business instead of working in your business'
+					/>
+				</div>
+			</Section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+			<Section id='section-why-us'>
+				<div className='flex flex-col w-full h-fit text-center bg-secondary p-24 rounded-lg'>
+					<h3 className='text-3xl'>Why us</h3>
+					<h2 className='text-4xl font-semibold'>
+						Put us to work. Generate results while you're relaxing
+					</h2>
+				</div>
+			</Section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			<Section id='section-how-it-works'>
+				<div className='flex flex-col items-center w-full h-fit gap-24'>
+					<h2 className='text-3xl'>How it works</h2>
+					<FloatingImageWithLink
+						content={{
+							Heading: 'Easy Setup',
+							subHeading:
+								"Once we get access, you're good to go. No hassle or code required",
+							paragraph:
+								'During the onboarding meeting, your dedicated account manager will get the necessary access to create, manage, and scale your ads.',
+							link: { text: 'GET FREE CONSULTATION', url: '' },
+							imageUrl: {
+								main: '/ads images/women with notebook.jpg',
+								floating: '/ads images/ad-steps-accountmanager.png',
+							},
+						}}
+					/>
+					<FloatingImageWithLink
+						imageFloats='Right'
+						content={{
+							Heading: 'Smart budgeting',
+							subHeading:
+								"Sigma's ad experts, will guide the budget strategy to achieve your desired goals and scale.",
+							paragraph:
+								'We use both Performance-based budgeting and Dynamic resources allocation i, two proven strategies in order to optimise the performance of your ads based on the budget of your choosing.',
+							link: { text: 'GET FREE CONSULTATION', url: '' },
+							imageUrl: {
+								main: '/ads images/ad-sales-woment.jpg',
+								floating:
+									'/ads images/ads-newleads-accountmanager.png',
+							},
+						}}
+					/>
+				</div>
+			</Section>
+
+			<Section id='section-testimonials'>
+				<Carousel
+					items={[
+						<ReviewCard
+							profile={{
+								imgUrl: '',
+								name: 'shafiq belaroussi',
+								title: 'CEO, Sigma marketing',
+							}}
+							review='I managed to hire my friend to help in the business after the
+					leads started flowing in. Their approach is very effective'
+						/>,
+						<ReviewCard
+							profile={{
+								imgUrl: '',
+								name: 'shafiq belaroussi',
+								title: 'CEO, Sigma marketing',
+							}}
+							review='I managed to hire my friend to help in the business after the
+				leads started flowing in. Their approach is very effective'
+						/>,
+						<ReviewCard
+							profile={{
+								imgUrl: '',
+								name: 'shafiq belaroussi',
+								title: 'CEO, Sigma marketing',
+							}}
+							review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+						/>,
+						<ReviewCard
+							profile={{
+								imgUrl: '',
+								name: 'shafiq belaroussi',
+								title: 'CEO, Sigma marketing',
+							}}
+							review='I managed to hire my friend to help in the business after the
+		leads started flowing in. Their approach is very effective'
+						/>,
+					]}>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+			leads started flowing in. Their approach is very effective'
+					/>
+				</Carousel>
+				{/* <div className='flex flex-col md:flex-row gap-8'>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+					leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+					leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+					leads started flowing in. Their approach is very effective'
+					/>
+					<ReviewCard
+						profile={{
+							imgUrl: '',
+							name: 'shafiq belaroussi',
+							title: 'CEO, Sigma marketing',
+						}}
+						review='I managed to hire my friend to help in the business after the
+					leads started flowing in. Their approach is very effective'
+					/>
+				</div> */}
+			</Section>
+		</main>
+	);
 }

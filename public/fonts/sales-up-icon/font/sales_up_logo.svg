@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>sigma marketing</metadata>
+<defs>
+<font id="sales_up_logo" horiz-adv-x="1000" >
+<font-face font-family="sales_up_logo" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="sales_up" unicode="&#xe801;" d="M801 845h-602c-107 0-194-87-194-194v-602c0-107 87-194 194-194h602c107 0 194 87 194 194v602c0 107-87 194-194 194z m-584-809h-122v101l122 96 0-197z m202 0h-121v258l60 51 61-51v-258z m202 0h-121v193l25-20 96 81v-254z m203 0h-121v319l121 101v-420z m81 410l-81 76-299-243-167 137-263-208v91l263 208 162-137 248 203-96 91h233v-218z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
