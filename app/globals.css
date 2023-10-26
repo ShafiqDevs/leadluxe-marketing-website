@@ -19,6 +19,6 @@
 	}
 
 	.main-padding-x {
-		@apply md:px-40 px-2;
+		@apply lg:px-48 md:px-16 px-2;
 	}
 }

@@ -1,6 +1,12 @@
 'use client';
 
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, {
+	Fragment,
+	ReactNode,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -25,16 +31,12 @@ const DraggableCarousel = ({ carousel_items }: Props) => {
 			ref={carouselRef}
 			className='carousel overflow-hidden'>
 			<motion.div
-				className='inner-carousel flex gap-4  cursor-grab '
+				className='inner-carousel flex justify-between gap-4 w-full h-full cursor-grab'
 				drag={'x'}
 				dragConstraints={{ right: 0, left: -carouselWidth }}
 				whileTap={{ cursor: 'grabbing' }}>
 				{carousel_items.map((carousel_item) => (
-					<motion.div
-						key={uuidv4()}
-						className='item w-fit h-fit shrink-0 '>
-						{carousel_item}
-					</motion.div>
+					<Fragment key={uuidv4()}>{carousel_item}</Fragment>
 				))}
 			</motion.div>
 		</motion.div>

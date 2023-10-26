@@ -9,12 +9,12 @@ type Props = {
 
 const ReviewCard = ({ profile, review }: Props) => {
 	return (
-		<div className='flex flex-col items-start w-fit min-w-fit text-text rounded-md px-8 py-16 gap-4 bg-black/[3%] dark:bg-white/[3%]'>
+		<div className='flex flex-col items-start shrink-0 w-96 aspect-square text-text rounded-md px-4 py-16 gap-4 bg-black/[3%] dark:bg-white/[3%]'>
 			<div className='flex items-center justify-start gap-4'>
 				<Image
-					className='w-20 aspect-square object-cover rounded-full border-4 border-accent'
+					className='w-20 aspect-square object-cover rounded-full border-2 border-accent'
 					alt=''
-					src={'/ads images/sales.jpg'}
+					src={profile.imgUrl}
 					width={512}
 					height={512}
 				/>
@@ -42,7 +42,7 @@ const ReviewCard = ({ profile, review }: Props) => {
 					<AiFillStar />
 				</span>
 			</div>
-			<p className='max-w-xs'>&quot;{review}&quot;</p>
+			<p className='text-sm max-w-[50ch]'>&quot;{review}&quot;</p>
 		</div>
 	);
 };

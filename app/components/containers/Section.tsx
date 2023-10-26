@@ -11,7 +11,7 @@ const Section = ({ id, children, bgShapes }: Props) => {
 	return (
 		<section
 			id={id}
-			className=' relative  main-padding-x my-32 bg-background text-text w-full h-fit'>
+			className='scroll-smooth relative  main-padding-x my-32 bg-background text-text w-full h-fit'>
 			{children}
 			{bgShapes && (
 				<>

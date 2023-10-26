@@ -33,9 +33,9 @@ export default function RootLayout({
 							</span>
 						}
 						navLinks={[
-							{ text: 'contact', href: '/contact-us' },
-							{ text: 'contact', href: '/contact-us' },
-							{ text: 'contact', href: '/contact-us' },
+							{ text: 'services', href: '/services' },
+							{ text: 'about us', href: '/about-us' },
+							{ text: 'contact', href: '#section-contact_form' },
 						]}
 						mobileNavbar={
 							<MobileNavbar
