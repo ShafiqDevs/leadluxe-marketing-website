@@ -22,8 +22,8 @@ const SideTextContainer = ({
 				}`}>
 				<div
 					className={`flex flex-col justify-center col-span-1 text-center lg:text-start`}>
-					<h2 className='text-3xl font-semibold w-fit'>{Title}</h2>
-					<h3 className='text-xl w-fit '>{subTitle}</h3>
+					<h3 className='text-3xl font-medium w-fit'>{Title}</h3>
+					<h4 className='text-xl font-light w-fit '>{subTitle}</h4>
 				</div>
 			</div>
 			<div className='w-full h-full'>{children}</div>

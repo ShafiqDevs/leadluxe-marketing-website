@@ -16,9 +16,9 @@ const FormButton = ({ className, href }: Props) => {
 			className={`flex justify-center items-center gap-4 ${className}
 			${!enabled ? 'pointer-events-none' : ''}`}
 			onClick={() => setenabled(false)}>
-			{enabled ? 'Submit' : 'Form Submitted'}
+			{enabled ? 'submit' : 'form submitted'}
 			{!enabled ? (
-				<span className='text-xl text-text transition-all duration-300'>
+				<span className='text-lg font-medium text-text transition-all duration-300'>
 					<AiFillCheckCircle />
 				</span>
 			) : (

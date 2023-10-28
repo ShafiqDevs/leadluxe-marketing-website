@@ -22,7 +22,7 @@ const TextAreaElement = ({
 	return (
 		<div className='relative flex flex-col w-full h-fit'>
 			<textarea
-				className='w-full border-b focus:border-b-accent border-b-text outline-none bg-transparent placeholder-transparent peer'
+				className='w-full font-light border-b focus:border-b-accent border-b-text outline-none bg-transparent placeholder-transparent peer'
 				name={name}
 				id={id}
 				placeholder={placeholder}
@@ -32,7 +32,7 @@ const TextAreaElement = ({
 			/>
 			<label
 				htmlFor={htmlFor}
-				className='absolute left-0 -top-6 text-sm text-accent pointer-events-none
+				className='absolute left-0 -top-6 text-sm font-light text-accent pointer-events-none
 								transition-all
 								duration-200
 								peer-placeholder-shown:text-xl

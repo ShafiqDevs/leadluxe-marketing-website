@@ -23,11 +23,11 @@ const Collapsibles = ({ questions }: Props) => {
 								<ChevronUpIcon
 									className={`${
 										open ? 'rotate-180 transform' : ''
-									} h-5 w-5 text-text transi`}
+									} h-5 w-5 text-text `}
 								/>
 							</Disclosure.Button>
-							<Transition enter='transiti'>
-								<Disclosure.Panel className='px-4 pt-4 pb-2 text-base text-text'>
+							<Transition enter=''>
+								<Disclosure.Panel className='px-4 pt-4 pb-2 text-base font-light text-text'>
 									{question.answer}
 								</Disclosure.Panel>
 							</Transition>

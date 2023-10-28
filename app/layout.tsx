@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Prompt } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/containers/Navbar';
 import BrandLogo from './components/icons/BrandLogo';
 import MobileNavbar from './components/containers/MobileNavbar';
 import NavLink from './components/ui/NavLink';
 import ThemesProvider from '@/utils/contexts/ThemesProvider';
+import Link from 'next/link';
+import { AiFillInstagram } from 'react-icons/ai';
+import { BiLogoFacebookCircle } from 'react-icons/bi';
+import { config_contact_details } from '@/utils/configs/emailing';
 
-const inter = Inter({ subsets: ['latin'] });
+const prompt = Prompt({
+	weight: ['300', '400', '500', '600'],
+	subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -23,7 +30,10 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className='dark'
-			style={{ colorScheme: 'dark' }}>
+			style={{
+				colorScheme: 'dark',
+				fontFamily: prompt.style.fontFamily,
+			}}>
 			<body className=' bg-background'>
 				<ThemesProvider>
 					<Navbar
@@ -45,9 +55,9 @@ export default function RootLayout({
 									</span>
 								}
 								navLinks={[
-									{ text: 'contact', href: '/contact-us' },
-									{ text: 'contact', href: '/contact-us' },
-									{ text: 'contact', href: '/contact-us' },
+									{ text: 'services', href: '/services' },
+									{ text: 'about us', href: '/about-us' },
+									{ text: 'contact', href: '#section-contact_form' },
 								]}
 							/>
 						}
@@ -55,6 +65,77 @@ export default function RootLayout({
 					{children}
 				</ThemesProvider>
 			</body>
+			<footer className='main-padding-x py-8 flex flex-col items-center gap-4 w-full h-fit bg-secondary/10 text-base'>
+				{/* container 1 */}
+				<div
+					className='flex flex-col items-start gap-2 w-full
+					lg:flex-row px-4'>
+					<div className='flex flex-col items-start gap-1'>
+						<span className='text-5xl'>
+							<BrandLogo />
+						</span>
+						<span className='text-sm'>
+							Elevating your business with our scalable revenue
+							framework
+						</span>
+					</div>
+					<div
+						className='flex justify-start w-full
+						lg:justify-end'>
+						<div
+							className='grid grid-cols-1 w-fit gap-4
+							lg:grid-cols-2 '>
+							{/* column 1 */}
+							<div className='col-span-1 flex flex-col items-start'>
+								<h4 className='text-xl font-medium'>Social</h4>
+								<Link
+									className='text-base font-light'
+									href={`mailto:${config_contact_details.defaultEmail}`}>
+									{config_contact_details.defaultEmail}
+								</Link>
+								<div className='flex items-center gap-2'>
+									<Link
+										href={``}
+										className='text-2xl hover:text-accent'>
+										<BiLogoFacebookCircle />
+									</Link>
+									<Link
+										href={``}
+										className='text-2xl hover:text-accent'>
+										<AiFillInstagram />
+									</Link>
+								</div>
+							</div>
+							{/* column 2 */}
+							<div className='col-span-1 flex flex-col items-start'>
+								<h4 className='text-xl font-medium'>Quick Links</h4>
+								<Link
+									className='text-base font-light hover:underline'
+									href={`/about-us`}>
+									About
+								</Link>
+								<Link
+									className='text-base font-light hover:underline'
+									href={`#section-contact_form`}>
+									Contact
+								</Link>
+								<Link
+									className='text-base font-light hover:underline'
+									href={`/terms-and-conditions`}>
+									Terms & Conditions
+								</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* container 2 */}
+				<div className='w-full h-fit border-t border-black/30 dark:border-white/30 py-4 px-4'>
+					<span className='text-xs font-light'>
+						© 2023 sigmamarketing.co.uk All rights reserved.
+					</span>
+				</div>
+			</footer>
 		</html>
 	);
 }

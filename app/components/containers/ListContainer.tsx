@@ -12,7 +12,7 @@ const ListContainer = ({ flexDirection, items }: Props) => {
 	return (
 		<ul
 			style={{ display: 'flex' }}
-			className='flex mx-auto lg:mx-0 justify-start items-start flex-wrap flex-col  lg:flex-row  text-center gap-3'>
+			className='flex mx-auto lg:mx-0 justify-start items-start flex-wrap flex-col  lg:flex-row  text-center gap-3 font-light'>
 			{items.map((item) => (
 				<ListItem
 					key={uuidv4()}

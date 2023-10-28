@@ -1,4 +1,4 @@
-import { config_contactForm } from '../configs/emailing';
+import { config_contact_details } from '../configs/emailing';
 
 export function getNativeMailClientLink(
 	_email: string | null,
@@ -10,8 +10,8 @@ export function getNativeMailClientLink(
 	const body = `${_body}\n\n\n\n\n——————————————————\nname: ${_name}\nemail: ${_email}`;
 
 	return `mailto:${
-		config_contactForm.defaultEmail
+		config_contact_details.defaultEmail
 	}?subject=${encodeURIComponent(
-		config_contactForm.default_subject
+		config_contact_details.default_subject
 	)}&body=${encodeURIComponent(body)}`;
 }

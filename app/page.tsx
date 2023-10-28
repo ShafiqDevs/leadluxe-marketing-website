@@ -24,16 +24,16 @@ export default function Home() {
 					{/* hero header */}
 					<div className='col-span-7 lg:col-span-3 flex flex-col items-start gap-5 '>
 						<div className='flex flex-col items-center lg:items-start text-center lg:text-left gap-3'>
-							<h1 className='text-5xl font-extrabold w-full'>
+							<h1 className='text-5xl font-semibold w-full'>
 								Grow your customer base and be ahead of the
 								competition
 							</h1>
-							<p className='text-2xl'>
+							<h2 className='text-2xl'>
 								By leveraging the latest cutting technology and social
 								media marketing
-							</p>
+							</h2>
 						</div>
-						<button className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/30 font-semibold'>
+						<button className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/30 text-base font-medium'>
 							GET FREE CONSULTATION
 						</button>
 						<ListContainer
@@ -88,7 +88,9 @@ export default function Home() {
 							height={106}
 						/>
 						<div className='flex flex-col'>
-							<span className='text-text text-2xl'>Overnightly</span>
+							<span className='text-text text-2xl font-light'>
+								Overnightly
+							</span>
 						</div>
 					</div>
 					{/* image 2 */}
@@ -103,10 +105,12 @@ export default function Home() {
 							height={106}
 						/>
 						<div className='flex flex-col'>
-							<span className='text-text text-2xl'>
+							<span className='text-text text-2xl font-light'>
 								Parallel Portals
 							</span>
-							<span className='text-text text-base'>Digital Art</span>
+							<span className='text-text text-sm font-light '>
+								Digital Art
+							</span>
 						</div>
 					</div>
 					{/* image 3 */}
@@ -119,10 +123,10 @@ export default function Home() {
 							height={106}
 						/>
 						<div className='flex flex-col'>
-							<span className='text-text text-2xl'>
+							<span className='text-text text-2xl font-light'>
 								Prim ShortStays
 							</span>
-							<span className='text-text text-base'></span>
+							<span className='text-text text-sm font-light '></span>
 						</div>
 					</div>
 					{/* image 4 */}
@@ -135,8 +139,12 @@ export default function Home() {
 							height={106}
 						/>
 						<div className='flex flex-col'>
-							<span className='text-text text-2xl'>Wizard Tools</span>
-							<span className='text-text text-base'>Play Smart</span>
+							<span className='text-text text-2xl font-light'>
+								Wizard Tools
+							</span>
+							<span className='text-text text-sm font-light '>
+								Play Smart
+							</span>
 						</div>
 					</div>
 				</PartnersContainer>
@@ -153,6 +161,7 @@ export default function Home() {
 							subHeading: 'Then this is definitely what you need',
 							paragraph:
 								"You realise that working 'in the business' to continuously improve your product or service and trying to optimise your conversions, learning new strategies and staying on top of the trends is impossible without support",
+							imageUrl: `/ads images/man with laptop.png`,
 						}}
 					/>
 					{/* ad section 2 */}
@@ -164,6 +173,7 @@ export default function Home() {
 							subHeading: 'It certainly can help your business too',
 							paragraph:
 								'The potential of social media reach through paid ads is massive and a lot of businesses in your niche are ignoring it due to lack of knowledge. Social media platforms have millions of users that are active everyday and with the right strategy you can tap into this large pool of users and monetise this reach and achieve high profits.',
+							imageUrl: `/ads images/man with laptop and coffee.png`,
 						}}
 					/>
 				</div>
@@ -194,16 +204,18 @@ export default function Home() {
 
 			<Section id='section-why-us'>
 				<div className='flex flex-col items-center gap-4 w-full h-fit text-center bg-secondary p-16 lg:p-24 rounded-lg'>
-					<h3 className='text-3xl lg:max-w-[50ch]'>Why us</h3>
-					<h2 className='text-4xl lg:max-w-[50ch] font-semibold'>
+					<h3 className='text-3xl lg:max-w-[50ch] font-light'>
+						Why us
+					</h3>
+					<h4 className='text-4xl lg:max-w-[50ch] font-medium'>
 						Put us to work. Generate results while you are relaxing
-					</h2>
+					</h4>
 				</div>
 			</Section>
 
 			<Section id='section-how-it-works'>
 				<div className='flex flex-col items-center w-full h-fit gap-16'>
-					<h2 className='text-3xl font-bold'>How it works</h2>
+					<h2 className='text-3xl font-medium'>How it works</h2>
 					<FloatingImageWithLink
 						content={{
 							Heading: 'Easy Setup',
@@ -251,10 +263,10 @@ export default function Home() {
 			<Section id='section-testimonials'>
 				<div className='flex flex-col gap-16 w-full h-fit'>
 					<div className='flex flex-col items-center'>
-						<h2 className='text-3xl font-bold'>Testimonials</h2>
-						<h3 className='text-2xl'>
+						<h3 className='text-3xl font-medium'>Testimonials</h3>
+						<h4 className='text-2xl font-normal'>
 							What our clients are saying about our work
-						</h3>
+						</h4>
 					</div>
 					<DraggableCarousel
 						carousel_items={[

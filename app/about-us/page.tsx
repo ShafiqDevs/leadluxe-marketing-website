@@ -3,64 +3,38 @@ import FloatingImageWithLink from '../components/containers/FloatingImageWithLin
 import SideTextContainer from '../components/containers/SideTextContainer';
 import FormContainer from '../components/containers/FormContainer';
 import Collapsibles from '../components/ui/Collapsibles';
+import FloatingImageWithText from '../components/containers/FloatingImageWithText';
 
 export default function Services() {
 	return (
 		<main className=' min-h-screen'>
-			<Section id='section-paid-advertising'>
+			<Section id='section-about-us'>
 				<div className='flex flex-col items-center w-full h-fit gap-16'>
 					<div className='flex flex-col items-center'>
-						<h2 className='text-3xl font-bold'>Services</h2>
-						<h3 className='text-2xl'>
-							How we provide you with value
-						</h3>
+						<h3 className='text-3xl font-medium'>About Us</h3>
+						<h4 className='text-2xl font-normal'>
+							We help your ads get clicks
+						</h4>
 					</div>
-					<FloatingImageWithLink
-						imageFloats='Right'
-						content={{
-							Heading: 'Paid Advertising',
-							subHeading: 'It certainly can help your business too',
-							paragraph: `Rev up your brand's success with our "Scalable Revenue Framework" powered paid advertising. Our expert campaigns ensure an amplified online presence and soaring conversion rates, creating a dynamic pathway for scalable revenue growth. Reach your target audience precisely when it counts`,
-							image: {
-								main: {
-									url: '/ads images/auto budgeting.png',
-									className: 'overflow-hidden',
-								},
-							},
-							link: { text: 'Get free consultation', url: '' },
-						}}
-					/>
-					<FloatingImageWithLink
+					<FloatingImageWithText
 						imageFloats='Left'
 						content={{
-							Heading: 'Ads Design Templates',
-							subHeading:
-								"Unlock your brand's full potential. Let us handle the creative heavy lifting while you focus on what matters most – your business",
-							paragraph:
-								'Our expert designers craft stunning ad creatives tailored to your brand, ensuring a seamless and visually captivating experience for your audience. Elevate your advertising game effortlessly and leave the design worries to us.',
-							image: {
-								main: {
-									url: '/ads images/ad design template.png',
-									className: 'overflow-hidden',
-								},
-							},
-							link: { text: 'Get free consultation', url: '' },
+							Heading: `Finding a team that you can trust to deliver exceptional work every time and be available when you call is a hard and frustrating task.`,
+							subHeading: ``,
+							paragraph: `These attributes are especially important during the initial growth and scaling phases of a business. This is why it's in our culture to be our client's number one supporter and consider their company like ours.
+							
+							When Sigma was born, we grew to become a digital marketing company that is managed by a team of carefully selected professionals with one primary objective... Help you reach your business goals!`,
+							imageUrl: `/ads images/company.png`,
 						}}
 					/>
-					<FloatingImageWithLink
+					<FloatingImageWithText
 						imageFloats='Right'
 						content={{
-							Heading: 'Efficient Analytics',
-							subHeading: 'It is no coincidence. It is a data game',
-							paragraph:
-								'We analyse your audience buyer behaviour and execute the right retargeting plan for enhanced conversion rates',
-							image: {
-								main: {
-									url: '/ads images/analytics.png',
-									className: 'overflow-hidden',
-								},
-							},
-							link: { text: 'Get free consultation', url: '' },
+							Heading: `What do our clients say`,
+							subHeading: ``,
+							paragraph: `Very Responsive and passionate about their work.
+							Within a month, they 7X our customers that are now paying us on monthly subscriptions.They generated us a lot of reviews to boos our reputation`,
+							imageUrl: `/ads images/group work.png`,
 						}}
 					/>
 				</div>

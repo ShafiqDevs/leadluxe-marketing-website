@@ -14,7 +14,7 @@ const NavLink = ({ text, href }: Props) => {
 			href={href}
 			className={`${
 				usePathname() === href && 'bg-primary'
-			} text-text p-2 w-full md:w-fit text-base md:text-xl hover:bg-primary/30 rounded-md  transition-all duration-200 `}>
+			}  p-2 lg:p-1 w-full md:w-fit text-base text-text md:text-lg font-light hover:bg-primary/30 rounded-md  transition-all duration-200 `}>
 			{text}
 		</Link>
 	);

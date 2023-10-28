@@ -20,7 +20,7 @@ const InputElement = ({
 	return (
 		<div className='relative flex flex-col w-full h-fit'>
 			<input
-				className='w-full border-b focus:border-b-accent border-b-text outline-none bg-transparent placeholder-transparent peer'
+				className='w-full font-light border-b focus:border-b-accent border-b-text outline-none bg-transparent placeholder-transparent peer'
 				type={type}
 				name={name}
 				id={id}
@@ -29,7 +29,7 @@ const InputElement = ({
 			/>
 			<label
 				htmlFor={htmlFor}
-				className='absolute left-0 -top-full text-sm text-accent pointer-events-none 
+				className='absolute left-0 -top-full text-sm font-light text-accent pointer-events-none 
 								transition-all
 								duration-200
 								peer-placeholder-shown:text-xl

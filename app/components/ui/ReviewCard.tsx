@@ -19,8 +19,8 @@ const ReviewCard = ({ profile, review }: Props) => {
 					height={512}
 				/>
 				<div className='flex flex-col'>
-					<h3 className='text-xl font-bold'>{profile.name}</h3>
-					<span className='text-sm text-text/30'>
+					<h3 className='text-xl font-medium'>{profile.name}</h3>
+					<span className='text-sm font-light text-text/30'>
 						{profile.title}
 					</span>
 				</div>
@@ -42,7 +42,9 @@ const ReviewCard = ({ profile, review }: Props) => {
 					<AiFillStar />
 				</span>
 			</div>
-			<p className='text-sm max-w-[50ch]'>&quot;{review}&quot;</p>
+			<p className='text-sm font-light max-w-[50ch]'>
+				&quot;{review}&quot;
+			</p>
 		</div>
 	);
 };

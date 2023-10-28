@@ -62,20 +62,21 @@ const FloatingImageWithLink = ({
 				className={`flex flex-col w-full h-fit
 				${imageFloats === 'Right' ? '' : ' items-end'}`}>
 				<div className='flex flex-col w-full xl:w-2/3 gap-5 text-text'>
-					<h2 className='text-3xl font-bold'>{content.Heading}</h2>
+					<h2 className='text-3xl font-medium'>{content.Heading}</h2>
 					<div className='flex flex-col w-full gap-1'>
-						<h3 className='text-2xl font-semibold'>
+						<h3 className='text-xl font-medium'>
 							{content.subHeading}
 						</h3>
-						<h3 className='text-xl'>{content.paragraph}</h3>
+						<p className='text-base font-light'>
+							{content.paragraph}
+						</p>
 					</div>
 					<Link
 						href={content.link.url}
-						className=' w-fit py-2 px-3 rounded-md text-base font-semibold bg-primary hover:bg-primary/30 '>
+						className=' w-fit py-2 px-3 rounded-md text-base font-light bg-primary hover:bg-primary/30 '>
 						{content.link.text}
 					</Link>
 				</div>
-				<p className='text-base'></p>
 			</div>
 		</div>
 	);

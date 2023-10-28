@@ -30,7 +30,8 @@ const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
 					)}
 				</div>
 				{/* nav links container */}
-				<ul className={`flex justify-end items-center w-full h-fit gap-4`}>
+				<ul
+					className={`flex justify-end items-center w-full h-fit gap-4`}>
 					{navLinks.map((item) => (
 						<NavLink
 							key={uuidv4()}
