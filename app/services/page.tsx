@@ -3,6 +3,16 @@ import FloatingImageWithLink from '../components/containers/FloatingImageWithLin
 import SideTextContainer from '../components/containers/SideTextContainer';
 import FormContainer from '../components/containers/FormContainer';
 import Collapsibles from '../components/ui/Collapsibles';
+import { Metadata } from 'next';
+import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
+
+export const metadata: Metadata = {
+	title: `Services | ${SEO_DEFAULT_VALUES.brand_name} `,
+	description: `Rev up your brand's success with our "Scalable Revenue Framework" powered paid advertising. Our expert campaigns ensure an amplified online presence and soaring conversion rates, creating a dynamic pathway for scalable revenue growth. Reach your target audience precisely when it counts`,
+	alternates: {
+		canonical: `/about-us`,
+	},
+};
 
 export default function Services() {
 	return (
@@ -27,7 +37,10 @@ export default function Services() {
 									className: 'overflow-hidden',
 								},
 							},
-							link: { text: 'Get free consultation', url: '' },
+							link: {
+								text: 'Get free consultation',
+								url: '#section-contact_form',
+							},
 						}}
 					/>
 					<FloatingImageWithLink
@@ -44,7 +57,10 @@ export default function Services() {
 									className: 'overflow-hidden',
 								},
 							},
-							link: { text: 'Get free consultation', url: '' },
+							link: {
+								text: 'Get free consultation',
+								url: '#section-contact_form',
+							},
 						}}
 					/>
 					<FloatingImageWithLink
@@ -60,7 +76,10 @@ export default function Services() {
 									className: 'overflow-hidden',
 								},
 							},
-							link: { text: 'Get free consultation', url: '' },
+							link: {
+								text: 'Get free consultation',
+								url: '#section-contact_form',
+							},
 						}}
 					/>
 				</div>

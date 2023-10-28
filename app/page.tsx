@@ -15,6 +15,18 @@ import PartnersContainer from './components/containers/PartnersContainer';
 import SideTextContainer from './components/containers/SideTextContainer';
 import Collapsibles from './components/ui/Collapsibles';
 import FormContainer from './components/containers/FormContainer';
+import { Metadata } from 'next';
+import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+	title: `Home | ${SEO_DEFAULT_VALUES.brand_name} `,
+	description:
+		'Grow your customer base and be ahead of the competition. By leveraging the latest cutting technology and social media marketing',
+	alternates: {
+		canonical: `/`,
+	},
+};
 
 export default function Home() {
 	return (
@@ -33,9 +45,11 @@ export default function Home() {
 								media marketing
 							</h2>
 						</div>
-						<button className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/30 text-base font-medium'>
+						<Link
+							href={`#section-contact_form`}
+							className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/90 text-base font-normal shadow-lg hover:shadow-primary/30 transition-all duration-300'>
 							GET FREE CONSULTATION
-						</button>
+						</Link>
 						<ListContainer
 							flexDirection='row'
 							items={[

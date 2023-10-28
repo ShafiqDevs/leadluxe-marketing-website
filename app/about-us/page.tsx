@@ -4,8 +4,19 @@ import SideTextContainer from '../components/containers/SideTextContainer';
 import FormContainer from '../components/containers/FormContainer';
 import Collapsibles from '../components/ui/Collapsibles';
 import FloatingImageWithText from '../components/containers/FloatingImageWithText';
+import { Metadata } from 'next';
+import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 
-export default function Services() {
+export const metadata: Metadata = {
+	title: `About | ${SEO_DEFAULT_VALUES.brand_name} `,
+	description: `Finding a team that you can trust to deliver exceptional work every time and be available when you call is a hard and frustrating task.
+		These attributes are especially important during the initial growth and scaling phases of a business. This is why it's in our culture to be our client's number one supporter and consider their company like ours. When Sigma was born, we grew to become a digital marketing company that is managed by a team of carefully selected professionals with one primary objective... Help you reach your business goals!`,
+	alternates: {
+		canonical: `/about-us`,
+	},
+};
+
+export default function About() {
 	return (
 		<main className=' min-h-screen'>
 			<Section id='section-about-us'>
