@@ -7,7 +7,7 @@ import NavLink from '../ui/NavLink';
 type Props = {
 	brandIcon?: ReactNode;
 	mobileNavbar?: ReactNode;
-	navLinks: { text: string; href: string }[];
+	navLinks: { text: string; href: string; scroll?: boolean }[];
 };
 
 const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
@@ -37,6 +37,7 @@ const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
 							key={uuidv4()}
 							text={item.text}
 							href={item.href}
+							scroll={item.scroll}
 						/>
 					))}
 					<li className='rounded-full text-2xl'>

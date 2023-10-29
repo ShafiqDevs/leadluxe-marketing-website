@@ -237,7 +237,10 @@ export default function Home() {
 								"Once we get access, you're good to go. No hassle or code required",
 							paragraph:
 								'During the onboarding meeting, your dedicated account manager will get the necessary access to create, manage, and scale your ads.',
-							link: { text: 'Get free consultation', url: '' },
+							link: {
+								text: 'Get free consultation',
+								url: '#section-contact_form',
+							},
 							image: {
 								main: {
 									url: '/ads images/women with notebook.jpg',
@@ -258,7 +261,10 @@ export default function Home() {
 								"Sigma's ad experts, will guide the budget strategy to achieve your desired goals and scale.",
 							paragraph:
 								'We use both Performance-based budgeting and Dynamic resources allocation, two proven strategies in order to optimise the performance of your ads based on the budget of your choosing.',
-							link: { text: 'Get free consultation', url: '' },
+							link: {
+								text: 'Get free consultation',
+								url: '#section-contact_form',
+							},
 							image: {
 								main: {
 									url: '/ads images/ad-sales-woment.jpg',
@@ -276,7 +282,7 @@ export default function Home() {
 
 			<Section id='section-testimonials'>
 				<div className='flex flex-col gap-16 w-full h-fit'>
-					<div className='flex flex-col items-center'>
+					<div className='flex flex-col items-center text-center'>
 						<h3 className='text-3xl font-medium'>Testimonials</h3>
 						<h4 className='text-2xl font-normal'>
 							What our clients are saying about our work

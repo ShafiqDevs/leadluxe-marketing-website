@@ -37,7 +37,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className='dark'
+			className='dark scroll-smooth'
 			style={{
 				colorScheme: 'dark',
 				fontFamily: prompt.style.fontFamily,
@@ -58,7 +58,10 @@ export default function RootLayout({
 						navLinks={[
 							{ text: 'services', href: '/services' },
 							{ text: 'about us', href: '/about-us' },
-							{ text: 'contact', href: '#section-contact_form' },
+							{
+								text: 'contact',
+								href: '#section-contact_form',
+							},
 						]}
 						mobileNavbar={
 							<MobileNavbar
@@ -81,7 +84,7 @@ export default function RootLayout({
 						{/* container 1 */}
 						<div
 							className='flex flex-col items-start gap-2 w-full
-					lg:flex-row px-4'>
+					lg:flex-row p-4'>
 							<div className='flex flex-col items-start gap-1'>
 								<Link
 									href={`/`}
@@ -96,14 +99,12 @@ export default function RootLayout({
 							<div
 								className='flex justify-start w-full
 						lg:justify-end'>
-								<div
-									className='grid grid-cols-1 w-fit gap-4
-							lg:grid-cols-2 '>
+								<div className='flex flex-col lg:flex-row gap-6 flex-wrap '>
 									{/* column 1 */}
-									<div className='col-span-1 flex flex-col items-start'>
-										<h4 className='text-xl font-medium'>Social</h4>
+									<div className='col-span-1 flex flex-col items-start '>
+										<h4 className='text-lg font-medium'>Social</h4>
 										<Link
-											className='text-base font-light'
+											className=' text-base font-light hover:underline'
 											href={`mailto:${config_contact_details.Email.defaultEmail}`}>
 											{config_contact_details.Email.defaultEmail}
 										</Link>
@@ -124,7 +125,7 @@ export default function RootLayout({
 									</div>
 									{/* column 2 */}
 									<div className='col-span-1 flex flex-col items-start'>
-										<h4 className='text-xl font-medium'>
+										<h4 className='text-lg font-medium'>
 											Quick Links
 										</h4>
 										<Link
@@ -134,6 +135,7 @@ export default function RootLayout({
 										</Link>
 										<Link
 											className='text-base font-light hover:underline'
+											scroll={false}
 											href={`#section-contact_form`}>
 											Contact
 										</Link>
@@ -148,7 +150,7 @@ export default function RootLayout({
 						</div>
 
 						{/* container 2 */}
-						<div className='w-full h-fit border-t border-black/30 dark:border-white/30 py-4 px-4'>
+						<div className='w-full h-fit border-t border-black/30 dark:border-white/30 p-4'>
 							<span className='text-xs font-light'>
 								© 2023 sigmamarketing.co.uk All rights reserved.
 							</span>
