@@ -36,7 +36,7 @@ export default function Home() {
 					{/* hero header */}
 					<div className='col-span-7 lg:col-span-3 flex flex-col items-start gap-5 '>
 						<div className='flex flex-col items-center lg:items-start text-center lg:text-left gap-3'>
-							<h1 className='text-5xl font-semibold w-full'>
+							<h1 className='text-5xl leading-[1.1] font-semibold w-full'>
 								Grow your customer base and be ahead of the
 								competition
 							</h1>
