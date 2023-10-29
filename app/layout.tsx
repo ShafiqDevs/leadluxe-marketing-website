@@ -12,6 +12,8 @@ import { BiLogoFacebookCircle } from 'react-icons/bi';
 import { config_contact_details } from '@/utils/configs/contact';
 import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 import { Social_Links } from '@/utils/configs/socials';
+import GoogleAnalytics from './components/containers/GoogleAnalytics';
+import CookieBanner from './components/ui/CookieBanner';
 
 const prompt = Prompt({
 	weight: ['300', '400', '500', '600'],
@@ -40,6 +42,11 @@ export default function RootLayout({
 				colorScheme: 'dark',
 				fontFamily: prompt.style.fontFamily,
 			}}>
+			<GoogleAnalytics
+				GA_MEASUREMENT_ID={
+					SEO_DEFAULT_VALUES.verification.google_analytics_tag
+				}
+			/>
 			<body className=' bg-background'>
 				<ThemesProvider>
 					<Navbar
@@ -69,83 +76,87 @@ export default function RootLayout({
 						}
 					/>
 					{children}
-				</ThemesProvider>
-			</body>
-			<footer className='main-padding-x py-8 flex flex-col items-center gap-4 w-full h-fit bg-secondary/10 text-base'>
-				{/* container 1 */}
-				<div
-					className='flex flex-col items-start gap-2 w-full
-					lg:flex-row px-4'>
-					<div className='flex flex-col items-start gap-1'>
-						<Link
-							href={`/`}
-							className='text-5xl'>
-							<BrandLogo />
-						</Link>
-						<span className='text-sm'>
-							Elevating your business with our scalable revenue
-							framework
-						</span>
-					</div>
-					<div
-						className='flex justify-start w-full
-						lg:justify-end'>
+
+					<footer className='main-padding-x py-8 flex flex-col items-center gap-4 w-full h-fit bg-secondary/10 text-base'>
+						{/* container 1 */}
 						<div
-							className='grid grid-cols-1 w-fit gap-4
-							lg:grid-cols-2 '>
-							{/* column 1 */}
-							<div className='col-span-1 flex flex-col items-start'>
-								<h4 className='text-xl font-medium'>Social</h4>
+							className='flex flex-col items-start gap-2 w-full
+					lg:flex-row px-4'>
+							<div className='flex flex-col items-start gap-1'>
 								<Link
-									className='text-base font-light'
-									href={`mailto:${config_contact_details.Email.defaultEmail}`}>
-									{config_contact_details.Email.defaultEmail}
+									href={`/`}
+									className='text-5xl'>
+									<BrandLogo />
 								</Link>
-								<div className='flex items-center gap-2'>
-									<Link
-										href={Social_Links.Facebook}
-										target='_blank'
-										className='text-2xl hover:text-accent'>
-										<BiLogoFacebookCircle />
-									</Link>
-									<Link
-										href={Social_Links.Instagram}
-										target='_blank'
-										className='text-2xl hover:text-accent'>
-										<AiFillInstagram />
-									</Link>
+								<span className='text-sm'>
+									Elevating your business with our scalable revenue
+									framework
+								</span>
+							</div>
+							<div
+								className='flex justify-start w-full
+						lg:justify-end'>
+								<div
+									className='grid grid-cols-1 w-fit gap-4
+							lg:grid-cols-2 '>
+									{/* column 1 */}
+									<div className='col-span-1 flex flex-col items-start'>
+										<h4 className='text-xl font-medium'>Social</h4>
+										<Link
+											className='text-base font-light'
+											href={`mailto:${config_contact_details.Email.defaultEmail}`}>
+											{config_contact_details.Email.defaultEmail}
+										</Link>
+										<div className='flex items-center gap-2'>
+											<Link
+												href={Social_Links.Facebook}
+												target='_blank'
+												className='text-2xl hover:text-accent'>
+												<BiLogoFacebookCircle />
+											</Link>
+											<Link
+												href={Social_Links.Instagram}
+												target='_blank'
+												className='text-2xl hover:text-accent'>
+												<AiFillInstagram />
+											</Link>
+										</div>
+									</div>
+									{/* column 2 */}
+									<div className='col-span-1 flex flex-col items-start'>
+										<h4 className='text-xl font-medium'>
+											Quick Links
+										</h4>
+										<Link
+											className='text-base font-light hover:underline'
+											href={`/about-us`}>
+											About
+										</Link>
+										<Link
+											className='text-base font-light hover:underline'
+											href={`#section-contact_form`}>
+											Contact
+										</Link>
+										<Link
+											className='text-base font-light hover:underline'
+											href={`/terms-and-conditions`}>
+											Terms & Conditions
+										</Link>
+									</div>
 								</div>
 							</div>
-							{/* column 2 */}
-							<div className='col-span-1 flex flex-col items-start'>
-								<h4 className='text-xl font-medium'>Quick Links</h4>
-								<Link
-									className='text-base font-light hover:underline'
-									href={`/about-us`}>
-									About
-								</Link>
-								<Link
-									className='text-base font-light hover:underline'
-									href={`#section-contact_form`}>
-									Contact
-								</Link>
-								<Link
-									className='text-base font-light hover:underline'
-									href={`/terms-and-conditions`}>
-									Terms & Conditions
-								</Link>
-							</div>
 						</div>
-					</div>
-				</div>
 
-				{/* container 2 */}
-				<div className='w-full h-fit border-t border-black/30 dark:border-white/30 py-4 px-4'>
-					<span className='text-xs font-light'>
-						© 2023 sigmamarketing.co.uk All rights reserved.
-					</span>
-				</div>
-			</footer>
+						{/* container 2 */}
+						<div className='w-full h-fit border-t border-black/30 dark:border-white/30 py-4 px-4'>
+							<span className='text-xs font-light'>
+								© 2023 sigmamarketing.co.uk All rights reserved.
+							</span>
+						</div>
+					</footer>
+					{/* <CookieBanner /> */}
+				</ThemesProvider>
+			</body>
 		</html>
 	);
 }

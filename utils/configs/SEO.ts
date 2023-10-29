@@ -4,5 +4,6 @@ export const SEO_DEFAULT_VALUES = {
 	verification: {
 		google_search_console:
 			'tWs6KbsgxG_JHGgqInucw6KgQf2ILAK18nJcbqAIf7g',
+		google_analytics_tag: 'G-MZ3SD655X6',
 	},
 };
