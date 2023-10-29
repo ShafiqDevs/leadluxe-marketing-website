@@ -22,6 +22,7 @@ export default function GoogleAnalytics({
 		<>
 			<Script
 				strategy='afterInteractive'
+				async
 				src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
 			/>
 			<Script
