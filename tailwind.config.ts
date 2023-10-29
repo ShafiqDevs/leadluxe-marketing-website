@@ -21,11 +21,6 @@ const config: Config = {
 				primary: 'hsl(var(--primary))',
 				secondary: 'hsl(var(--secondary))',
 				accent: 'hsl(var(--accent))',
-
-				// Light theme
-				// text_light: `hsl(196 87% 6%)`,
-				//Dark theme
-				// text_dark: `hsl(196 87% 94%)`,
 			},
 			transitionProperty: {
 				height: 'height',
