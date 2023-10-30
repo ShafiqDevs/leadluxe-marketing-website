@@ -57,7 +57,7 @@ export default function RootLayout({
 						}
 						navLinks={[
 							{ text: 'services', href: '/services' },
-							{ text: 'about us', href: '/about-us' },
+							{ text: 'about', href: '/about' },
 							{
 								text: 'contact',
 								href: '#section-contact_form',
@@ -72,7 +72,7 @@ export default function RootLayout({
 								}
 								navLinks={[
 									{ text: 'services', href: '/services' },
-									{ text: 'about us', href: '/about-us' },
+									{ text: 'about', href: '/about' },
 									{ text: 'contact', href: '#section-contact_form' },
 								]}
 							/>
@@ -130,7 +130,7 @@ export default function RootLayout({
 										</h4>
 										<Link
 											className='text-base font-light hover:underline'
-											href={`/about-us`}>
+											href={`/about`}>
 											About
 										</Link>
 										<Link
