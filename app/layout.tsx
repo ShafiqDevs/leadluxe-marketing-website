@@ -48,6 +48,7 @@ export default function RootLayout({
 					SEO_DEFAULT_VALUES.verification.google_analytics_tag
 				}
 			/>
+			<MetaChatButton />
 			<body className=' bg-background'>
 				<ThemesProvider>
 					<Navbar
@@ -158,7 +159,14 @@ export default function RootLayout({
 						</div>
 					</footer>
 					{/* <CookieBanner /> */}
-					<MetaChatButton />
+					{/* <MetaChatButton /> */}
+					{/* Messenger Chat Plugin Code */}
+					<div id='fb-root'></div>
+
+					{/* Your Chat Plugin code  */}
+					<div
+						id='fb-customer-chat'
+						className='fb-customerchat'></div>
 				</ThemesProvider>
 			</body>
 		</html>
