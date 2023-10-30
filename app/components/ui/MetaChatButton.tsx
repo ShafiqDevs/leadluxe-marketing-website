@@ -16,15 +16,24 @@ const MetaChatButton = (props: Props) => {
 				id='fb-customer-chat'
 				className='fb-customerchat'></div>
 
-			<Script id='script-1'>
-				{`var chatbox = document.getElementById('fb-customer-chat');
+			<Script
+				id='script-1'
+				async
+				strategy='afterInteractive'
+				dangerouslySetInnerHTML={{
+					__html: `var chatbox = document.getElementById('fb-customer-chat');
           chatbox.setAttribute("page_id", "119115137775935");
-          chatbox.setAttribute("attribution", "biz_inbox");`}
-			</Script>
+          chatbox.setAttribute("attribution", "biz_inbox");`,
+				}}
+			/>
 
 			{/* Your SDK code  */}
-			<Script id='script-2'>
-				{`window.fbAsyncInit = function() {
+			<Script
+				id='script-2'
+				async
+				strategy='afterInteractive'
+				dangerouslySetInnerHTML={{
+					__html: `window.fbAsyncInit = function() {
             FB.init({
               xfbml            : true,
               version          : 'v18.0'
@@ -37,8 +46,9 @@ const MetaChatButton = (props: Props) => {
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));`}
-			</Script>
+          }(document, 'script', 'facebook-jssdk'));`,
+				}}
+			/>
 		</>
 	);
 };
