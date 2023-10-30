@@ -49,6 +49,7 @@ export default function RootLayout({
 				}
 			/>
 			<MetaChatButton />
+
 			<body className=' bg-background'>
 				<ThemesProvider>
 					<Navbar
@@ -159,14 +160,6 @@ export default function RootLayout({
 						</div>
 					</footer>
 					{/* <CookieBanner /> */}
-					{/* <MetaChatButton /> */}
-					{/* Messenger Chat Plugin Code */}
-					<div id='fb-root'></div>
-
-					{/* Your Chat Plugin code  */}
-					<div
-						id='fb-customer-chat'
-						className='fb-customerchat'></div>
 				</ThemesProvider>
 			</body>
 		</html>

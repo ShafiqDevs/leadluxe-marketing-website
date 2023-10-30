@@ -9,12 +9,12 @@ const MetaChatButton = (props: Props) => {
 	return (
 		<>
 			{/* Messenger Chat Plugin Code */}
-			{/* <div id='fb-root'></div> */}
+			<div id='fb-root'></div>
 
 			{/* Your Chat Plugin code  */}
-			{/* <div
+			<div
 				id='fb-customer-chat'
-				className='fb-customerchat'></div> */}
+				className='fb-customerchat'></div>
 
 			<Script
 				id='script-fb-customer-chat'
@@ -28,7 +28,7 @@ const MetaChatButton = (props: Props) => {
 
 			{/* Your SDK code  */}
 			<Script
-				async
+            async
 				id='script-fb-chat-sdk'
 				strategy='afterInteractive'
 				dangerouslySetInnerHTML={{
