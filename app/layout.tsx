@@ -11,7 +11,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { BiLogoFacebookCircle } from 'react-icons/bi';
 import { config_contact_details } from '@/utils/configs/contact';
 import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
-import { Social_Links } from '@/utils/configs/socials';
+import { SOCIALS_DEFAULT_VALUES } from '@/utils/configs/socials';
 import GoogleAnalytics from './components/containers/GoogleAnalytics';
 import CookieBanner from './components/ui/CookieBanner';
 import MetaChatButton from './components/ui/MetaChatButton';
@@ -116,13 +116,13 @@ export default function RootLayout({
 										</Link>
 										<div className='flex items-center gap-2'>
 											<Link
-												href={Social_Links.Facebook}
+												href={SOCIALS_DEFAULT_VALUES.Facebook}
 												target='_blank'
 												className='text-2xl hover:text-accent'>
 												<BiLogoFacebookCircle />
 											</Link>
 											<Link
-												href={Social_Links.Instagram}
+												href={SOCIALS_DEFAULT_VALUES.Instagram}
 												target='_blank'
 												className='text-2xl hover:text-accent'>
 												<AiFillInstagram />

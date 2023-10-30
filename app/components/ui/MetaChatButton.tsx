@@ -1,5 +1,7 @@
 'use client';
 
+import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
+import { SOCIALS_DEFAULT_VALUES } from '@/utils/configs/socials';
 import Script from 'next/script';
 import React from 'react';
 
@@ -22,7 +24,7 @@ const MetaChatButton = (props: Props) => {
 				strategy='afterInteractive'
 				dangerouslySetInnerHTML={{
 					__html: `var chatbox = document.getElementById('fb-customer-chat');
-          chatbox.setAttribute("page_id", "119115137775935");
+          chatbox.setAttribute("page_id", ${SOCIALS_DEFAULT_VALUES.Facebook_Page_Id});
           chatbox.setAttribute("attribution", "biz_inbox");`,
 				}}
 			/>
