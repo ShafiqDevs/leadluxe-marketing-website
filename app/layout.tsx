@@ -15,6 +15,7 @@ import { Social_Links } from '@/utils/configs/socials';
 import GoogleAnalytics from './components/containers/GoogleAnalytics';
 import CookieBanner from './components/ui/CookieBanner';
 import MetaChatButton from './components/ui/MetaChatButton';
+import { Suspense } from 'react';
 
 const prompt = Prompt({
 	weight: ['300', '400', '500', '600'],
@@ -43,11 +44,13 @@ export default function RootLayout({
 				colorScheme: 'dark',
 				fontFamily: prompt.style.fontFamily,
 			}}>
-			<GoogleAnalytics
-				GA_MEASUREMENT_ID={
-					SEO_DEFAULT_VALUES.verification.google_analytics_tag
-				}
-			/>
+			<Suspense>
+				<GoogleAnalytics
+					GA_MEASUREMENT_ID={
+						SEO_DEFAULT_VALUES.verification.google_analytics_tag
+					}
+				/>
+			</Suspense>
 			<body className=' bg-background'>
 				<MetaChatButton />
 
