@@ -8,7 +8,7 @@ import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 
 export const metadata: Metadata = {
 	title: `Services | ${SEO_DEFAULT_VALUES.brand_name} `,
-	description: `Rev up your brand's success with our "Scalable Revenue Framework" powered paid advertising. Our expert campaigns ensure an amplified online presence and soaring conversion rates, creating a dynamic pathway for scalable revenue growth. Reach your target audience precisely when it counts`,
+	description: `Rev up your brand's success with our &quot;Scalable Revenue Framework&quot; powered paid advertising. Our expert campaigns ensure an amplified online presence and soaring conversion rates, creating a dynamic pathway for scalable revenue growth. Reach your target audience precisely when it counts`,
 	alternates: {
 		canonical: `/about-us`,
 	},
@@ -27,7 +27,7 @@ export default function Page() {
 
 					<p>
 						These terms and conditions outline the rules and
-						regulations for the use of Sigma marketing's Website,
+						regulations for the use of Sigma marketing&apos;s Website,
 						located at https://www.sigmamarketing.co.uk/.
 					</p>
 
@@ -41,21 +41,23 @@ export default function Page() {
 					<p>
 						The following terminology applies to these Terms and
 						Conditions, Privacy Statement and Disclaimer Notice and
-						all Agreements: "Client", "You" and "Your" refers to you,
-						the person log on this website and compliant to the
-						Company's terms and conditions. "The Company",
-						"Ourselves", "We", "Our" and "Us", refers to our Company.
-						"Party", "Parties", or "Us", refers to both the Client and
-						ourselves. All terms refer to the offer, acceptance and
-						consideration of payment necessary to undertake the
-						process of our assistance to the Client in the most
-						appropriate manner for the express purpose of meeting the
-						Client's needs in respect of provision of the Company's
-						stated services, in accordance with and subject to,
-						prevailing law of gb. Any use of the above terminology or
-						other words in the singular, plural, capitalization and/or
-						he/she or they, are taken as interchangeable and therefore
-						as referring to same.
+						all Agreements: &quot;Client&quot;, &quot;You&quot; and
+						&quot;Your&quot; refers to you, the person log on this
+						website and compliant to the Company&apos;s terms and
+						conditions. &quot;The Company&quot;,
+						&quot;Ourselves&quot;, &quot;We&quot;, &quot;Our&quot; and
+						&quot;Us&quot;, refers to our Company. &quot;Party&quot;,
+						&quot;Parties&quot;, or &quot;Us&quot;, refers to both the
+						Client and ourselves. All terms refer to the offer,
+						acceptance and consideration of payment necessary to
+						undertake the process of our assistance to the Client in
+						the most appropriate manner for the express purpose of
+						meeting the Client&apos;s needs in respect of provision of
+						the Company&apos;s stated services, in accordance with and
+						subject to, prevailing law of gb. Any use of the above
+						terminology or other words in the singular, plural,
+						capitalization and/or he/she or they, are taken as
+						interchangeable and therefore as referring to same.
 					</p>
 
 					<h3>
@@ -65,15 +67,16 @@ export default function Page() {
 					<p>
 						We employ the use of cookies. By accessing Sigma
 						marketing, you agreed to use cookies in agreement with the
-						Sigma marketing's Privacy Policy.{' '}
+						Sigma marketing&apos;s Privacy Policy.
 					</p>
 
 					<p>
 						Most interactive websites use cookies to let us retrieve
-						the user's details for each visit. Cookies are used by our
-						website to enable the functionality of certain areas to
-						make it easier for people visiting our website. Some of
-						our affiliate/advertising partners may also use cookies.
+						the user&apos;s details for each visit. Cookies are used
+						by our website to enable the functionality of certain
+						areas to make it easier for people visiting our website.
+						Some of our affiliate/advertising partners may also use
+						cookies.
 					</p>
 
 					<h3>
@@ -104,7 +107,7 @@ export default function Page() {
 
 					<p>
 						This Agreement shall begin on the date hereof. Our Terms
-						and Conditions were created with the help of the{' '}
+						and Conditions were created with the help of the
 						<a href='https://www.termsandconditionsgenerator.com/'>
 							Free Terms and Conditions Generator
 						</a>
@@ -197,7 +200,7 @@ export default function Page() {
 						the link: (a) is not in any way deceptive; (b) does not
 						falsely imply sponsorship, endorsement or approval of the
 						linking party and its products and/or services; and (c)
-						fits within the context of the linking party's site.
+						fits within the context of the linking party&apos;s site.
 					</p>
 
 					<p>
@@ -236,7 +239,7 @@ export default function Page() {
 						the link: (a) is not in any way deceptive; (b) does not
 						falsely imply sponsorship, endorsement or approval of the
 						linking party and its products or services; and (c) fits
-						within the context of the linking party's site.
+						within the context of the linking party&apos;s site.
 					</p>
 
 					<p>
@@ -264,13 +267,14 @@ export default function Page() {
 						<li>
 							By use of any other description of our Website being
 							linked to that makes sense within the context and format
-							of content on the linking party's site.
+							of content on the linking party&apos;s site.
 						</li>
 					</ul>
 
 					<p>
-						No use of Sigma marketing's logo or other artwork will be
-						allowed for linking absent a trademark license agreement.
+						No use of Sigma marketing&apos;s logo or other artwork
+						will be allowed for linking absent a trademark license
+						agreement.
 					</p>
 
 					<h3>
@@ -307,7 +311,7 @@ export default function Page() {
 						or any particular link to our Website. You approve to
 						immediately remove all links to our Website upon request.
 						We also reserve the right to amen these terms and
-						conditions and it's linking policy at any time. By
+						conditions and it&apos;s linking policy at any time. By
 						continuously linking to our Website, you agree to be bound
 						to and follow these linking terms and conditions.
 					</p>

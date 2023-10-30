@@ -17,6 +17,7 @@ const MetaChatButton = (props: Props) => {
 				className='fb-customerchat'></div>
 
 			<Script
+				id='script-fb-customer-chat'
 				dangerouslySetInnerHTML={{
 					__html: `var chatbox = document.getElementById('fb-customer-chat');
 				chatbox.setAttribute("page_id", "119115137775935");
@@ -26,6 +27,7 @@ const MetaChatButton = (props: Props) => {
 
 			{/* Your SDK code  */}
 			<Script
+				id='script-fb-chat-sdk'
 				dangerouslySetInnerHTML={{
 					__html: `window.fbAsyncInit = function() {
         FB.init({
