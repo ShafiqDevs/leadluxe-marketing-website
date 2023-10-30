@@ -14,6 +14,7 @@ import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 import { Social_Links } from '@/utils/configs/socials';
 import GoogleAnalytics from './components/containers/GoogleAnalytics';
 import CookieBanner from './components/ui/CookieBanner';
+import MetaChatButton from './components/ui/MetaChatButton';
 
 const prompt = Prompt({
 	weight: ['300', '400', '500', '600'],
@@ -157,6 +158,7 @@ export default function RootLayout({
 						</div>
 					</footer>
 					{/* <CookieBanner /> */}
+					<MetaChatButton />
 				</ThemesProvider>
 			</body>
 		</html>
