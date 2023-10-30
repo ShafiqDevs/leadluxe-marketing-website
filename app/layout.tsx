@@ -29,6 +29,20 @@ export const metadata: Metadata = {
 	verification: {
 		google: SEO_DEFAULT_VALUES.verification.google_search_console,
 	},
+	alternates: {
+		canonical: `${SEO_DEFAULT_VALUES.base_url}/`,
+	},
+	robots: {
+		index: true,
+		googleBot: {
+			index: true,
+			follow: false,
+			noimageindex: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
 };
 
 export default function RootLayout({

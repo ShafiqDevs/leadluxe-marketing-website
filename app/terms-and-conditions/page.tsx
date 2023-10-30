@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 	title: `Services | ${SEO_DEFAULT_VALUES.brand_name} `,
 	description: `Rev up your brand's success with our &quot;Scalable Revenue Framework&quot; powered paid advertising. Our expert campaigns ensure an amplified online presence and soaring conversion rates, creating a dynamic pathway for scalable revenue growth. Reach your target audience precisely when it counts`,
 	alternates: {
-		canonical: `/about-us`,
+		canonical: `/terms-and-conditions`,
 	},
 };
 

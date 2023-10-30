@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 	description: `Finding a team that you can trust to deliver exceptional work every time and be available when you call is a hard and frustrating task.
 		These attributes are especially important during the initial growth and scaling phases of a business. This is why it's in our culture to be our client's number one supporter and consider their company like ours. When Sigma was born, we grew to become a digital marketing company that is managed by a team of carefully selected professionals with one primary objective... Help you reach your business goals!`,
 	alternates: {
-		canonical: `/about-us`,
+		canonical: `/about`,
 	},
 };
 
