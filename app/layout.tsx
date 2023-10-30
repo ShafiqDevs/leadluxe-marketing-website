@@ -160,6 +160,7 @@ export default function RootLayout({
 						</div>
 					</footer>
 					{/* <CookieBanner /> */}
+					<MetaChatButton/>
 				</ThemesProvider>
 			</body>
 		</html>
