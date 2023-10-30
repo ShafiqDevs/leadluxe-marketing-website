@@ -48,9 +48,9 @@ export default function RootLayout({
 					SEO_DEFAULT_VALUES.verification.google_analytics_tag
 				}
 			/>
-			<MetaChatButton />
-
 			<body className=' bg-background'>
+				<MetaChatButton />
+
 				<ThemesProvider>
 					<Navbar
 						brandIcon={
@@ -160,7 +160,6 @@ export default function RootLayout({
 						</div>
 					</footer>
 					{/* <CookieBanner /> */}
-					<MetaChatButton/>
 				</ThemesProvider>
 			</body>
 		</html>
