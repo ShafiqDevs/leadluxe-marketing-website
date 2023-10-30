@@ -21,7 +21,7 @@ const MobileNavbar = ({ brandIcon, navLinks }: Props) => {
 
 	return (
 		<nav
-			className={`md:hidden flex flex-col justify-center items-center gap-4 w-full h-fit main-padding-x py-3 bg-background border-b border-white/30`}>
+			className={`md:hidden flex flex-col justify-center items-center gap-4 w-full h-fit main-padding-x py-3 bg-background border-b border-black/30 dark:border-white/30`}>
 			<div className='flex w-full h-fit justify-end items-center'>
 				{brandIcon && (
 					<Link

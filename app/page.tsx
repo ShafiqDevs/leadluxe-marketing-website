@@ -70,7 +70,7 @@ export default function Home() {
 								height={448}
 							/>
 							<Image
-								className='absolute object-cover w-64 aspect-auto shadow-md shadow-text/20 rounded-xl right-0 lg:-right-7 top-0
+								className='absolute object-cover w-[40%] aspect-auto shadow-md shadow-text/20 rounded-xl right-0 lg:-right-7 top-0
 								'
 								alt='new leads flow with sigma marketing'
 								src={'/ads images/new_leads_ad.png'}
@@ -78,7 +78,7 @@ export default function Home() {
 								height={423.06}
 							/>
 							<Image
-								className='absolute object-cover w-52 aspect-auto shadow-md shadow-text/20 rounded-xl left-0 lg:-left-7 bottom-0
+								className='absolute object-cover w-[30%] aspect-auto shadow-md shadow-text/20 rounded-xl left-0 lg:-left-7 bottom-0
 								'
 								alt='excellence of stats with sigma marketing'
 								src={'/ads images/stats_ad.png'}
@@ -186,7 +186,7 @@ export default function Home() {
 								'If this ONE thing can help your competitors 10X their revenue when executed correctly..',
 							subHeading: 'It certainly can help your business too',
 							paragraph:
-								'The potential of social media reach through paid ads is massive and a lot of businesses in your niche are ignoring it due to lack of knowledge. Social media platforms have millions of users that are active everyday and with the right strategy you can tap into this large pool of users and monetise this reach and achieve high profits.',
+								'The potential of social media reach through paid ads is massive and a lot of businesses in your niche are ignoring it due to lack of knowledge.\nSocial media platforms have millions of users that are active everyday and with the right strategy you can tap into this large pool of users and monetise this reach and achieve high profits.',
 							imageUrl: `/ads images/man with laptop and coffee.png`,
 						}}
 					/>
@@ -307,7 +307,7 @@ export default function Home() {
 									title: 'CEO, Wizard-Tools',
 								}}
 								review='Very Responsive and passionate about their work.
-								Within a month, they 7X our customers that are now paying us on monthly subscriptions.They generated us a lot of reviews to boos our reputation'
+								Within a month, they 7X our customers that are now paying us monthly subscriptions.They generated us a lot of reviews to boost our reputation'
 							/>,
 							<ReviewCard
 								key={uuidv4()}
@@ -362,7 +362,7 @@ export default function Home() {
 							{
 								question: 'How long until you launch?',
 								answer:
-									'Depending on the service that you signed up for, your account manager typically starts your onboarding with 24 hours of signing up. Expect your marketing to start within 2 business days after the onboarding. ',
+									'Depending on the service that you signed up for, your account manager typically starts your onboarding with 24 hours of signing up.\n\nExpect your marketing to start within 2 business days after the onboarding. ',
 							},
 							{
 								question: 'How long until I get results?',

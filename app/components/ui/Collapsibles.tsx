@@ -27,7 +27,7 @@ const Collapsibles = ({ questions }: Props) => {
 								/>
 							</Disclosure.Button>
 							<Transition enter=''>
-								<Disclosure.Panel className='px-4 pt-4 pb-2 text-base font-light text-text'>
+								<Disclosure.Panel className='px-4 pt-4 pb-2 text-base font-light text-text whitespace-pre-wrap'>
 									{question.answer}
 								</Disclosure.Panel>
 							</Transition>

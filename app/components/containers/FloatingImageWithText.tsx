@@ -38,7 +38,7 @@ const FloatingImageWithText = ({
 						</h4>
 					)}
 				</div>
-				<p className='text-base font-light max-w-[55ch]'>
+				<p className='text-base font-light max-w-[55ch] whitespace-pre-wrap'>
 					{content.paragraph}
 				</p>
 			</div>

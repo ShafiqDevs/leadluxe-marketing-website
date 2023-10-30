@@ -83,7 +83,7 @@ export default function RootLayout({
 					<footer className='main-padding-x py-8 flex flex-col items-center gap-4 w-full h-fit bg-secondary/10 text-base'>
 						{/* container 1 */}
 						<div
-							className='flex flex-col items-start gap-2 w-full
+							className='flex flex-col items-start gap-8 w-full
 					lg:flex-row p-4'>
 							<div className='flex flex-col items-start gap-1'>
 								<Link
@@ -99,7 +99,7 @@ export default function RootLayout({
 							<div
 								className='flex justify-start w-full
 						lg:justify-end'>
-								<div className='flex flex-col lg:flex-row gap-6 flex-wrap '>
+								<div className='flex flex-col lg:flex-row gap-4 flex-wrap '>
 									{/* column 1 */}
 									<div className='col-span-1 flex flex-col items-start '>
 										<h4 className='text-lg font-medium'>Social</h4>
