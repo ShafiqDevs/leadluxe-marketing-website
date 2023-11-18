@@ -39,7 +39,8 @@ export default function Services() {
 							},
 							link: {
 								text: 'Get free consultation',
-								url: '#section-contact_form',
+								url: 'https://calendly.com/discovery-time/30min',
+								newTab: true,
 							},
 						}}
 					/>
@@ -59,7 +60,8 @@ export default function Services() {
 							},
 							link: {
 								text: 'Get free consultation',
-								url: '#section-contact_form',
+								url: 'https://calendly.com/discovery-time/30min',
+								newTab: true,
 							},
 						}}
 					/>
@@ -78,7 +80,8 @@ export default function Services() {
 							},
 							link: {
 								text: 'Get free consultation',
-								url: '#section-contact_form',
+								url: 'https://calendly.com/discovery-time/30min',
+								newTab: true,
 							},
 						}}
 					/>

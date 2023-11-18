@@ -32,9 +32,8 @@ export default function About() {
 						content={{
 							Heading: `Finding a team that you can trust to deliver exceptional work every time and be available when you call is a hard and frustrating task.`,
 							subHeading: ``,
-							paragraph: `These attributes are especially important during the initial growth and scaling phases of a business. This is why it's in our culture to be our client's number one supporter and consider their company like ours.
-							
-							When Sigma was born, we grew to become a digital marketing company that is managed by a team of carefully selected professionals with one primary objective... Help you reach your business goals!`,
+							paragraph:
+								"These attributes are especially important during the initial growth and scaling phases of a business. This is why it's in our culture to be our client's number one supporter and consider their company like ours.\n\nWhen Sigma was born, we grew to become a digital marketing company that is managed by a team of carefully selected professionals with one primary objective... Help you reach your business goals!",
 							imageUrl: `/ads images/company.png`,
 						}}
 					/>
@@ -43,8 +42,8 @@ export default function About() {
 						content={{
 							Heading: `What do our clients say`,
 							subHeading: ``,
-							paragraph: `Very Responsive and passionate about their work.
-							Within a month, they 7X our customers that are now paying us on monthly subscriptions.They generated us a lot of reviews to boos our reputation`,
+							paragraph:
+								'Very Responsive and passionate about their work.\n\nWithin a month, they 7X our customers that are now paying us on monthly subscriptions.They generated us a lot of reviews to boos our reputation',
 							imageUrl: `/ads images/group work.png`,
 						}}
 					/>

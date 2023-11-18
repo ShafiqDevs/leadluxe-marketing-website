@@ -7,7 +7,7 @@ import NavLink from '../ui/NavLink';
 type Props = {
 	brandIcon?: ReactNode;
 	mobileNavbar?: ReactNode;
-	navLinks: { text: string; href: string; scroll?: boolean }[];
+	navLinks?: { text: string; href: string; scroll?: boolean }[];
 };
 
 const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
@@ -32,7 +32,7 @@ const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
 				{/* nav links container */}
 				<ul
 					className={`flex justify-end items-center w-full h-fit gap-4`}>
-					{navLinks.map((item) => (
+					{navLinks?.map((item) => (
 						<NavLink
 							key={uuidv4()}
 							text={item.text}

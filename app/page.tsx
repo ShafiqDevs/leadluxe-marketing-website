@@ -46,7 +46,8 @@ export default function Home() {
 							</h2>
 						</div>
 						<Link
-							href={`#section-contact_form`}
+							href='https://calendly.com/discovery-time/30min'
+							target='_blank'
 							className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/90 text-base font-normal shadow-lg hover:shadow-primary/30 transition-all duration-300'>
 							GET FREE CONSULTATION
 						</Link>
@@ -239,7 +240,8 @@ export default function Home() {
 								'During the onboarding meeting, your dedicated account manager will get the necessary access to create, manage, and scale your ads.',
 							link: {
 								text: 'Get free consultation',
-								url: '#section-contact_form',
+								url: 'https://calendly.com/discovery-time/30min',
+								newTab: true,
 							},
 							image: {
 								main: {
@@ -263,7 +265,8 @@ export default function Home() {
 								'We use both Performance-based budgeting and Dynamic resources allocation, two proven strategies in order to optimise the performance of your ads based on the budget of your choosing.',
 							link: {
 								text: 'Get free consultation',
-								url: '#section-contact_form',
+								url: 'https://calendly.com/discovery-time/30min',
+								newTab: true,
 							},
 							image: {
 								main: {

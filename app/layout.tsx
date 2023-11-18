@@ -76,6 +76,7 @@ export default function RootLayout({
 							</span>
 						}
 						navLinks={[
+							{ text: 'home', href: '/' },
 							{ text: 'services', href: '/services' },
 							{ text: 'about', href: '/about' },
 							{
@@ -91,6 +92,7 @@ export default function RootLayout({
 									</span>
 								}
 								navLinks={[
+									{ text: 'home', href: '/' },
 									{ text: 'services', href: '/services' },
 									{ text: 'about', href: '/about' },
 									{ text: 'contact', href: '#section-contact_form' },
@@ -148,6 +150,11 @@ export default function RootLayout({
 										<h4 className='text-lg font-medium'>
 											Quick Links
 										</h4>
+										<Link
+											className='text-base font-light hover:underline'
+											href={`/`}>
+											Home
+										</Link>
 										<Link
 											className='text-base font-light hover:underline'
 											href={`/about`}>

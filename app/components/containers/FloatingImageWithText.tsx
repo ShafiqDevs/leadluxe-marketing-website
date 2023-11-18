@@ -17,7 +17,7 @@ const FloatingImageWithText = ({
 	content,
 }: Props) => {
 	return (
-		<div className='grid grid-cols-6 lg:flex-row items-center gap-x-5 gap-y-11 w-full h-fit'>
+		<div className='grid grid-cols-6 lg:flex-row items-center gap-x-16 gap-y-16 w-full h-fit'>
 			<Image
 				className={`col-span-6 lg:col-span-3 w-auto aspect-auto mx-auto lg:mx-0
 				${imageFloats === 'Left' ? '' : 'lg:order-last lg:ml-auto'}`}

@@ -19,7 +19,7 @@ type Props = {
 				className?: React.HTMLProps<HTMLDivElement>['className'];
 			};
 		};
-		link: { text: string; url: string };
+		link: { text: string; url: string; newTab?: boolean };
 	};
 };
 
@@ -67,12 +67,13 @@ const FloatingImageWithLink = ({
 						<h3 className='text-xl font-medium'>
 							{content.subHeading}
 						</h3>
-						<p className='text-base font-light'>
+						<p className='text-base font-light whitespace-pre-line'>
 							{content.paragraph}
 						</p>
 					</div>
 					<Link
 						href={content.link.url}
+						target={content.link.newTab ? '_blank' : '_parent'}
 						className=' w-fit py-2 px-3 rounded-md text-base font-light bg-primary hover:bg-primary/30 '>
 						{content.link.text}
 					</Link>
