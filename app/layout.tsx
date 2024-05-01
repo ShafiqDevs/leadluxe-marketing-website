@@ -71,7 +71,7 @@ export default function RootLayout({
 				<ThemesProvider>
 					<Navbar
 						brandIcon={
-							<span className='md:text-7xl text-6xl w-full h-full text-text'>
+							<span className='lg:text-8xl text-7xl w-full h-full text-text'>
 								<BrandLogo />
 							</span>
 						}

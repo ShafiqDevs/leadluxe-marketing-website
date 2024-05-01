@@ -18,6 +18,7 @@ import FormContainer from './components/containers/FormContainer';
 import { Metadata } from 'next';
 import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 import Link from 'next/link';
+import SemanticHtmlForm from './components/ui/SemanticHtmlForm';
 
 export const metadata: Metadata = {
 	title: `Home | ${SEO_DEFAULT_VALUES.brand_name} `,
@@ -30,357 +31,142 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<main className=' min-h-screen'>
-			<Section id='section-hero'>
-				<div className='grid grid-flow-row lg:grid-flow-col grid-cols-7 items-center w-full h-full gap-y-16 lg:gap-x-4'>
-					{/* hero header */}
-					<div className='col-span-7 lg:col-span-3 flex flex-col items-start gap-5 '>
-						<div className='flex flex-col items-center lg:items-start text-center lg:text-left gap-3'>
-							<h1 className='text-5xl leading-[1.1] font-semibold w-full'>
-								Grow your customer base and be ahead of the
-								competition
-							</h1>
-							<h2 className='text-2xl'>
-								By leveraging the latest cutting technology and social
-								media marketing
-							</h2>
-						</div>
+		<main className='flex flex-col gap-36 min-h-screen'>
+			<section
+				id='section-hero'
+				className='scroll-smooth'>
+				<div
+					style={{
+						backgroundImage: `url("/ads images/heroImg.webp")`,
+					}}
+					className='relative flex justify-center items-center w-full h-screen bg-no-repeat main-padding-x  bg-cover'>
+					<div className='absolute w-full h-full top-0 left-0 bg-black/80'></div>
+					<div className=' flex flex-col justify-center items-center gap-4 p-2 z-[2]'>
+						<span className='text-2xl font-light'>
+							Effortless Business Growth
+						</span>
+						<h1 className='lg:text-7xl text-5xl text-center max-w-[75ch]'>
+							We Generate{' '}
+							<span className='font-semibold text-primary'>
+								Quote-Ready
+							</span>{' '}
+							Home Improvement{' '}
+							<span className='font-semibold text-primary'>
+								{' '}
+								Leads For You
+							</span>
+						</h1>
+						<span className='text-2xl'>
+							No Heavy Lifting Required!
+						</span>
 						<Link
-							href='https://calendly.com/discovery-time/30min'
-							target='_blank'
-							className='px-2 py-3 mx-auto lg:mx-0 rounded-md bg-primary hover:bg-primary/90 text-base font-normal shadow-lg hover:shadow-primary/30 transition-all duration-300'>
-							GET FREE CONSULTATION
+							className='text-2xl rounded-full bg-primary font-semibold px-6 py-4 mt-4 '
+							href={'#section-contact-form'}>
+							Get More Leads
 						</Link>
-						<ListContainer
-							flexDirection='row'
-							items={[
-								'High sales',
-								'Earn your time back',
-								'Automated process',
-							]}
+						<Image
+							className=''
+							alt='swipe down to read more'
+							src={`/swipe.gif`}
+							width={150}
+							height={150}
 						/>
-					</div>
-					{/* hero image */}
-					<div className='col-span-7 lg:col-span-4 flex justify-center lg:justify-end items-center w-full h-full '>
-						<div className='relative flex justify-center items-center w-[95%] lg:w-[512px] aspect-square bg-gradient-to-r from-primary/50 to-secondary/50 rounded-tl-[50%] rounded-r-[5%] rounded-bl-[5%] rounded-br-[15%] p-2 mr-7'>
-							<Image
-								className='w-full h-full object-cover rounded-tl-[50%] rounded-r-[5%] rounded-bl-[5%] rounded-br-[15%]'
-								alt='hero Image'
-								src={'/ads images/sales.jpg'}
-								width={656.8}
-								height={448}
-							/>
-							<Image
-								className='absolute object-cover w-[40%] aspect-auto shadow-md shadow-text/20 rounded-xl right-0 lg:-right-7 top-0
-								'
-								alt='new leads flow with sigma marketing'
-								src={'/ads images/new_leads_ad.png'}
-								width={1024}
-								height={423.06}
-							/>
-							<Image
-								className='absolute object-cover w-[30%] aspect-auto shadow-md shadow-text/20 rounded-xl left-0 lg:-left-7 bottom-0
-								'
-								alt='excellence of stats with sigma marketing'
-								src={'/ads images/stats_ad.png'}
-								width={512}
-								height={593.32}
-							/>
-						</div>
 					</div>
 				</div>
-			</Section>
+			</section>
 
-			<Section id='section-partners'>
-				<PartnersContainer>
-					{/* image 1 */}
-					<div className='flex items-center w-full lg:w-fit gap-3'>
-						<Image
-							className='w-20 aspect-auto'
-							alt='Brand logo - Overnightly working with sigma marketing'
-							src={'/partners logos/Brand logo - Overnightly.png'}
-							width={339}
-							height={106}
-						/>
-						<div className='flex flex-col'>
-							<span className='text-text text-2xl font-light'>
-								Overnightly
-							</span>
-						</div>
-					</div>
-					{/* image 2 */}
-					<div className='flex items-center w-full lg:w-fit gap-3'>
-						<Image
-							className='w-20 aspect-auto'
-							alt='Brand logo - Parallel Portals working with sigma marketing'
-							src={
-								'/partners logos/Brand logo - Parallel Portals.png'
-							}
-							width={339}
-							height={106}
-						/>
-						<div className='flex flex-col'>
-							<span className='text-text text-2xl font-light'>
-								Parallel Portals
-							</span>
-							<span className='text-text text-sm font-light '>
-								Digital Art
-							</span>
-						</div>
-					</div>
-					{/* image 3 */}
-					<div className='flex items-center w-full lg:w-fit gap-3'>
-						<Image
-							className='w-20 aspect-auto'
-							alt='Brand logo - Prim ShortStays working with sigma marketing'
-							src={'/partners logos/Brand logo - Prim ShortStays.png'}
-							width={339}
-							height={106}
-						/>
-						<div className='flex flex-col'>
-							<span className='text-text text-2xl font-light'>
-								Prim ShortStays
-							</span>
-							<span className='text-text text-sm font-light '></span>
-						</div>
-					</div>
-					{/* image 4 */}
-					<div className='flex items-center w-full lg:w-fit gap-3'>
-						<Image
-							className='w-20 aspect-auto'
-							alt='Brand logo - WizardTools working with sigma marketing'
-							src={'/partners logos/Brand logo - WizardTools.png'}
-							width={339}
-							height={106}
-						/>
-						<div className='flex flex-col'>
-							<span className='text-text text-2xl font-light'>
-								Wizard Tools
-							</span>
-							<span className='text-text text-sm font-light '>
-								Play Smart
-							</span>
-						</div>
-					</div>
-				</PartnersContainer>
-			</Section>
-
-			<Section id='section-ad-copy-1'>
-				<div className='flex flex-col gap-24'>
-					{/* ad section 1 */}
-					<FloatingImageWithText
-						imageFloats='Left'
-						content={{
-							Heading:
-								'You have a brilliant plan.. And you need to generate new connections, leads and exposure?',
-							subHeading: 'Then this is definitely what you need',
-							paragraph:
-								"You realise that working 'in the business' to continuously improve your product or service and trying to optimise your conversions, learning new strategies and staying on top of the trends is impossible without support",
-							imageUrl: `/ads images/man with laptop.png`,
-						}}
-					/>
-					{/* ad section 2 */}
-					<FloatingImageWithText
-						imageFloats='Right'
-						content={{
-							Heading:
-								'If this ONE thing can help your competitors 10X their revenue when executed correctly..',
-							subHeading: 'It certainly can help your business too',
-							paragraph:
-								'The potential of social media reach through paid ads is massive and a lot of businesses in your niche are ignoring it due to lack of knowledge.\nSocial media platforms have millions of users that are active everyday and with the right strategy you can tap into this large pool of users and monetise this reach and achieve high profits.',
-							imageUrl: `/ads images/man with laptop and coffee.png`,
-						}}
-					/>
-				</div>
-			</Section>
-
-			<Section id='section-benefits'>
-				<BenefitsContainer>
-					<FeatureItem
-						key={uuidv4()}
-						icon={<SalesUpIcon />}
-						Title='High Sales'
-						text='Increased sales through improved customer experience journey designed to convert'
-					/>
-					<FeatureItem
-						key={uuidv4()}
-						icon={<AutomatedIcon />}
-						Title='Automated process'
-						text='Leverage the power of AI tools and social media technologies '
-					/>
-					<FeatureItem
-						key={uuidv4()}
-						icon={<CalendarIcon />}
-						Title='Earn back your time'
-						text='Let our team take care of the time consuming tasks and allow you to work on your business instead of working in your business'
-					/>
-				</BenefitsContainer>
-			</Section>
-
-			<Section id='section-why-us'>
-				<div className='flex flex-col items-center gap-4 w-full h-fit text-center bg-secondary p-16 lg:p-24 rounded-lg'>
-					<h3 className='text-3xl lg:max-w-[50ch] font-light'>
-						Why us
+			<Section id='section-who-are-we'>
+				<div className='flex flex-col items-center justify-center gap-12 text-center'>
+					<h3 className='text-5xl'>
+						Who Are <span className='text-primary'>We</span>?
 					</h3>
-					<h4 className='text-4xl lg:max-w-[50ch] font-medium'>
-						Put us to work. Generate results while you are relaxing
-					</h4>
+					<p className='text-xl max-w-[70ch] font-light'>
+						We're a Nottingham-based agency that helps home
+						improvement companies by delivering top-tier, quote-ready
+						leads through strategic advertising on popular social
+						media sites. Our targeted approach not only frees you up
+						to concentrate on your work, but also ensures your growth
+						is driven by genuinely interested clients, making your
+						business growth smooth and efficient.
+					</p>
 				</div>
 			</Section>
 
-			<Section id='section-how-it-works'>
-				<div className='flex flex-col items-center w-full h-fit gap-16'>
-					<h2 className='text-3xl font-medium'>How it works</h2>
-					<FloatingImageWithLink
-						content={{
-							Heading: 'Easy Setup',
-							subHeading:
-								"Once we get access, you're good to go. No hassle or code required",
-							paragraph:
-								'During the onboarding meeting, your dedicated account manager will get the necessary access to create, manage, and scale your ads.',
-							link: {
-								text: 'Get free consultation',
-								url: 'https://calendly.com/discovery-time/30min',
-								newTab: true,
-							},
-							image: {
-								main: {
-									url: '/ads images/women with notebook.jpg',
-									className:
-										'w-full lg:w-80 aspect-video lg:aspect-[17/21] rounded-xl overflow-hidden',
-								},
-								floating: {
-									url: '/ads images/ad-steps-accountmanager.png',
-								},
-							},
-						}}
-					/>
-					<FloatingImageWithLink
-						imageFloats='Right'
-						content={{
-							Heading: 'Smart budgeting',
-							subHeading:
-								"Sigma's ad experts, will guide the budget strategy to achieve your desired goals and scale.",
-							paragraph:
-								'We use both Performance-based budgeting and Dynamic resources allocation, two proven strategies in order to optimise the performance of your ads based on the budget of your choosing.',
-							link: {
-								text: 'Get free consultation',
-								url: 'https://calendly.com/discovery-time/30min',
-								newTab: true,
-							},
-							image: {
-								main: {
-									url: '/ads images/ad-sales-woment.jpg',
-									className:
-										'w-full lg:w-80 aspect-video lg:aspect-[17/21] rounded-xl overflow-hidden',
-								},
-								floating: {
-									url: '/ads images/ads-newleads-accountmanager.png',
-								},
-							},
-						}}
-					/>
-				</div>
-			</Section>
-
-			<Section id='section-testimonials'>
-				<div className='flex flex-col gap-16 w-full h-fit'>
-					<div className='flex flex-col items-center text-center'>
-						<h3 className='text-3xl font-medium'>Testimonials</h3>
-						<h4 className='text-2xl font-normal'>
-							What our clients are saying about our work
-						</h4>
+			<Section id='section-our-process'>
+				<div className='flex flex-col items-start justify-center gap-12 w-full h-fit text-center'>
+					<h3 className='text-5xl w-full'>
+						Our <span className='text-primary'>Process</span>
+					</h3>
+					<div className='grid max-md:grid-rows-3 lg:grid-cols-3 gap-4 w-full h-fit'>
+						<div className='flex flex-col items-center lg:flex-row lg:items-start lg:justify-center gap-4'>
+							<span className='flex items-center justify-center w-12 h-12 aspect-square rounded-full text-2xl font-extrabold bg-primary'>
+								1
+							</span>
+							<div className='flex flex-col'>
+								<span className='text-center lg:text-start text-2xl font-semibold'>
+									Gather Content
+								</span>
+								<p className='text-center lg:text-start font-light'>
+									In the initial step, we collect visuals that
+									highlight your craftsmanship. These form the
+									foundation of our strategy, serving to attract a
+									greater number of potential clients to your
+									business.
+								</p>
+							</div>
+						</div>
+						<div className='flex flex-col items-center lg:flex-row lg:items-start lg:justify-center gap-4'>
+							<span className='flex items-center justify-center w-12 h-12 aspect-square rounded-full text-2xl font-extrabold bg-primary'>
+								2
+							</span>
+							<div className='flex flex-col'>
+								<span className='text-center lg:text-start text-2xl font-semibold'>
+									Launch Ads
+								</span>
+								<p className='text-center lg:text-start font-light'>
+									Next, we launch ads based on the content we've
+									collected. These ads are strategically designed and
+									placed on popular social media platforms to capture
+									clients attention.
+								</p>
+							</div>
+						</div>
+						<div className='flex flex-col items-center lg:flex-row lg:items-start lg:justify-center gap-4'>
+							<span className='flex items-center justify-center w-12 h-12 aspect-square rounded-full text-2xl font-extrabold bg-primary'>
+								3
+							</span>
+							<div className='flex flex-col'>
+								<span className='text-center lg:text-start text-2xl font-semibold'>
+									Generate Leads
+								</span>
+								<p className='text-center lg:text-start font-light'>
+									Finally, we collect information from individuals who
+									are genuinely interested in your services.
+									Prioritising quote-ready leads and eliminating tire
+									kickers.
+								</p>
+							</div>
+						</div>
 					</div>
-					<DraggableCarousel
-						carousel_items={[
-							<ReviewCard
-								key={uuidv4()}
-								profile={{
-									imgUrl: '/reviewers images/Ben Kirby.png',
-									name: 'Ben Kirby',
-									title: 'CEO, KirbyOperations',
-								}}
-								review='I managed to hire my friend to help in the business after the leads started flowing in. Their approach is very effective'
-							/>,
-							<ReviewCard
-								key={uuidv4()}
-								profile={{
-									imgUrl: '/reviewers images/wizardtools image.png',
-									name: 'Wizard Tools',
-									title: 'CEO, Wizard-Tools',
-								}}
-								review='Very Responsive and passionate about their work.
-								Within a month, they 7X our customers that are now paying us monthly subscriptions.They generated us a lot of reviews to boost our reputation'
-							/>,
-							<ReviewCard
-								key={uuidv4()}
-								profile={{
-									imgUrl: '/reviewers images/oussamasales image.png',
-									name: 'Oussama Sales',
-									title: 'CEO, LeadsBee',
-								}}
-								review='I really appreciate your work'
-							/>,
-							<ReviewCard
-								key={uuidv4()}
-								profile={{
-									imgUrl:
-										'/reviewers images/plansio_central image.png',
-									name: 'Plansio Central',
-									title: 'Community Manager, Plansio Central',
-								}}
-								review='Their work is so clean and refined nicely, We’ve always wanted to create a community full of designers and we like your work, great job!'
-							/>,
-						]}
-					/>
 				</div>
 			</Section>
 
-			<Section id='section-contact_form'>
-				<SideTextContainer
-					textDirection='Left'
-					Title='CONTACT'
-					subTitle='Send us an email with any question you may have '>
-					<FormContainer />
-				</SideTextContainer>
-			</Section>
-
-			<Section id='section-faq'>
-				<SideTextContainer
-					textDirection='Left'
-					Title='FAQ'
-					subTitle='Answers to some questions you might have'>
-					<Collapsibles
-						questions={[
-							{
-								question: 'How much should I spend to get results?',
-								answer:
-									'We reverse engineer that with you when we understand your goals and which marketing service you want help with.\n\nThe answer will be concluded from a combination of conversion volume, cost per conversion and ROI.\n\nFor example for paid advertising, if you want 20 conversions per day and the average cost per conversion is $10, then your marketing budget would need to be $200/day.',
-							},
-							{
-								question: 'How much do you charge?',
-								answer:
-									'Once we understand the type of marketing services you need help with and your specific goals, then we can create options around timelines, strategies, and team sizes for you to decide.\n\nOur goal is to generate a positive ROI within the first 45 days of working with our team.',
-							},
-							{
-								question: 'How long until you launch?',
-								answer:
-									'Depending on the service that you signed up for, your account manager typically starts your onboarding with 24 hours of signing up.\n\nExpect your marketing to start within 2 business days after the onboarding. ',
-							},
-							{
-								question: 'How long until I get results?',
-								answer:
-									'The great thing about digital marketing and a fast turn around time is that you could start seeing results immediately. For example, when we launch your ads, conversions typically start happening within 24 hours.\n\nWe set performance based goals for all our clients monthly',
-							},
-							{
-								question: 'How long is the contract?',
-								answer:
-									"We don't have contracts. We believe that there is no reason to lock you into a contract if you're not happy. But also because our clients never cancel!",
-							},
-						]}
-					/>
-				</SideTextContainer>
-			</Section>
+			<section
+				id='section-contact-form'
+				className='scroll-smooth'>
+				<div
+					style={{
+						backgroundImage: `url("/ads images/renovation.webp")`,
+					}}
+					className='relative flex justify-center items-center w-full h-screen bg-no-repeat main-padding-x  bg-cover'>
+					<div className='absolute w-full h-full top-0 left-0 bg-black/80' />
+					<div className='flex justify-center items-center w-full z-[2]'>
+						<div className='bg-background p-6 w-full md:w-[70%] rounded-lg'>
+							<SemanticHtmlForm />
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 	);
 }

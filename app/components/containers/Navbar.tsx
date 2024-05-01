@@ -12,40 +12,19 @@ type Props = {
 
 const Navbar = ({ brandIcon, mobileNavbar, navLinks }: Props) => {
 	return (
-		<>
-			{/* mobile nav */}
-			{mobileNavbar}
-
-			{/* desktop nav */}
-			<nav
-				className={`hidden md:flex justify-end items-center w-full h-fit main-padding-x py-3 bg-background border-b border-black/30 dark:border-white/30`}>
-				<div className='flex w-fit h-fit justify-end items-center'>
-					{brandIcon && (
-						<Link
-							href={`/`}
-							id='#'
-							className='flex justify-center items-center w-full h-fit mr-auto'>
-							{brandIcon}
-						</Link>
-					)}
-				</div>
-				{/* nav links container */}
-				<ul
-					className={`flex justify-end items-center w-full h-fit gap-4`}>
-					{navLinks?.map((item) => (
-						<NavLink
-							key={uuidv4()}
-							text={item.text}
-							href={item.href}
-							scroll={item.scroll}
-						/>
-					))}
-					<li className='rounded-full text-2xl'>
-						<ThemeToggle />
-					</li>
-				</ul>
-			</nav>
-		</>
+		<nav
+			className={`flex flex-col justify-center items-center w-full h-fit main-padding-x py-3 bg-background border-b border-black/30 dark:border-white/30`}>
+			<div className='flex w-fit h-fit justify-center items-center'>
+				{brandIcon && (
+					<Link
+						href={`/`}
+						id='#'
+						className='flex justify-center items-center w-full h-fit mr-auto'>
+						{brandIcon}
+					</Link>
+				)}
+			</div>
+		</nav>
 	);
 };
 
