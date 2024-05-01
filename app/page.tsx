@@ -14,7 +14,6 @@ import BenefitsContainer from './components/containers/BenefitsContainer';
 import PartnersContainer from './components/containers/PartnersContainer';
 import SideTextContainer from './components/containers/SideTextContainer';
 import Collapsibles from './components/ui/Collapsibles';
-import FormContainer from './components/containers/FormContainer';
 import { Metadata } from 'next';
 import { SEO_DEFAULT_VALUES } from '@/utils/configs/SEO';
 import Link from 'next/link';
@@ -65,7 +64,7 @@ export default function Home() {
 							Get More Leads
 						</Link>
 						<Image
-							className=''
+							className='w-24 h-24'
 							alt='swipe down to read more'
 							src={`/swipe.gif`}
 							width={150}
@@ -81,7 +80,7 @@ export default function Home() {
 						Who Are <span className='text-primary'>We</span>?
 					</h3>
 					<p className='text-xl max-w-[70ch] font-light'>
-						We're a Nottingham-based agency that helps home
+						We&apos;re a Nottingham-based agency that helps home
 						improvement companies by delivering top-tier, quote-ready
 						leads through strategic advertising on popular social
 						media sites. Our targeted approach not only frees you up
@@ -124,7 +123,7 @@ export default function Home() {
 									Launch Ads
 								</span>
 								<p className='text-center lg:text-start font-light'>
-									Next, we launch ads based on the content we've
+									Next, we launch ads based on the content we&apos;ve
 									collected. These ads are strategically designed and
 									placed on popular social media platforms to capture
 									clients attention.
@@ -160,13 +159,61 @@ export default function Home() {
 					}}
 					className='relative flex justify-center items-center w-full h-screen bg-no-repeat main-padding-x  bg-cover'>
 					<div className='absolute w-full h-full top-0 left-0 bg-black/80' />
-					<div className='flex justify-center items-center w-full z-[2]'>
+					<div className='flex flex-col justify-center items-center gap-12 w-full z-[2]'>
+						<div className='flex flex-col justify-center items-center gap-4'>
+							<h3 className='text-center text-5xl'>
+								Get 10 New Quote-Ready Leads
+							</h3>
+							<p className='text-3xl text-primary'>
+								Within 30 Days, or You Don’t Pay
+							</p>
+						</div>
 						<div className='bg-background p-6 w-full md:w-[70%] rounded-lg'>
 							<SemanticHtmlForm />
 						</div>
 					</div>
 				</div>
 			</section>
+			<Section id='section-trust-bades'>
+				<div className='flex justify-center items-center flex-wrap gap-24 w-full h-fit pb-36'>
+					<div className='flex flex-col justify-center items-center gap-4'>
+						<Image
+							alt='Industry Specialist badge'
+							className='w-24 h-24'
+							src={`/IndustrySpecialists.png`}
+							width={150}
+							height={150}
+						/>
+						<span className='text-xl text-center '>
+							Industry Specialists
+						</span>
+					</div>
+					<div className='flex flex-col justify-center items-center gap-4'>
+						<Image
+							alt='Guaranteed Results badge'
+							className='w-24 h-24'
+							src={`/guarantee.png`}
+							width={150}
+							height={150}
+						/>
+						<span className='text-xl text-center '>
+							Guaranteed Results
+						</span>
+					</div>
+					<div className='flex flex-col justify-center items-center gap-4'>
+						<Image
+							alt='Qualified Leads badge'
+							className='w-24 h-24'
+							src={`/QualifiedLeads.png`}
+							width={150}
+							height={150}
+						/>
+						<span className='text-xl text-center '>
+							Qualified Leads
+						</span>
+					</div>
+				</div>
+			</Section>
 		</main>
 	);
 }

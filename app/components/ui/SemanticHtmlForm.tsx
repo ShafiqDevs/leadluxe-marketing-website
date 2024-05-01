@@ -11,6 +11,10 @@ export default function SemanticHtmlForm({}: Props) {
 		email: '',
 		phone: '',
 	});
+	const [loading, setLoading] = useState({
+		state: false,
+		message: 'Send',
+	});
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -23,12 +27,24 @@ export default function SemanticHtmlForm({}: Props) {
 	const handleFormSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		// Implement your form submission logic here
+		setLoading({ state: true, message: 'Loading' });
 		console.log(formData);
 		try {
 			const data = await axios.post(
 				`https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZhMDYzNDA0MzE1MjY4NTUzMTUxM2Ei_pc`,
 				JSON.stringify(formData)
 			);
+			if (data)
+				setFormData({
+					email: '',
+					fullName: '',
+					phone: '',
+					website: '',
+				});
+			setLoading({
+				state: false,
+				message: 'Form Sent. Thank you!',
+			});
 		} catch (error) {
 			console.log(error);
 		}
@@ -107,9 +123,10 @@ export default function SemanticHtmlForm({}: Props) {
 			</div>
 			<div>
 				<button
+					disabled={loading.state}
 					type='submit'
 					className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
-					Submit
+					{loading.message}
 				</button>
 			</div>
 		</form>

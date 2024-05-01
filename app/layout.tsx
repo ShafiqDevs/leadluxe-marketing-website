@@ -145,33 +145,6 @@ export default function RootLayout({
 											</Link>
 										</div>
 									</div>
-									{/* column 2 */}
-									<div className='col-span-1 flex flex-col items-start'>
-										<h4 className='text-lg font-medium'>
-											Quick Links
-										</h4>
-										<Link
-											className='text-base font-light hover:underline'
-											href={`/`}>
-											Home
-										</Link>
-										<Link
-											className='text-base font-light hover:underline'
-											href={`/about`}>
-											About
-										</Link>
-										<Link
-											className='text-base font-light hover:underline'
-											scroll={false}
-											href={`#section-contact_form`}>
-											Contact
-										</Link>
-										<Link
-											className='text-base font-light hover:underline'
-											href={`/terms-and-conditions`}>
-											Terms & Conditions
-										</Link>
-									</div>
 								</div>
 							</div>
 						</div>
