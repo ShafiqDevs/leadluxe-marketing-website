@@ -132,7 +132,7 @@ export default function SemanticHtmlForm({}: Props) {
 				<button
 					disabled={loading.state}
 					type='submit'
-					className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+					className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-primary hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/70'>
 					{loading.message}
 				</button>
 			</div>
