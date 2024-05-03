@@ -66,6 +66,7 @@ export default function Home() {
 						<Image
 							className='w-24 h-24'
 							alt='swipe down to read more'
+							title='Seipe down to read more'
 							src={`/swipe.gif`}
 							width={150}
 							height={150}
@@ -179,6 +180,7 @@ export default function Home() {
 					<div className='flex flex-col justify-center items-center gap-4'>
 						<Image
 							alt='Industry Specialist badge'
+							title='Industry Specialist badge'
 							className='w-24 h-24'
 							src={`/IndustrySpecialists.png`}
 							width={150}
@@ -191,6 +193,7 @@ export default function Home() {
 					<div className='flex flex-col justify-center items-center gap-4'>
 						<Image
 							alt='Guaranteed Results badge'
+							title='Guaranteed Results badge'
 							className='w-24 h-24'
 							src={`/guarantee.png`}
 							width={150}
@@ -203,6 +206,7 @@ export default function Home() {
 					<div className='flex flex-col justify-center items-center gap-4'>
 						<Image
 							alt='Qualified Leads badge'
+							title='Qualified Leads badge'
 							className='w-24 h-24'
 							src={`/QualifiedLeads.png`}
 							width={150}
