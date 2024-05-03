@@ -177,7 +177,7 @@ export default function Home() {
 					<div className='flex flex-col justify-center items-center gap-12 w-full text-center z-[2]'>
 						<div className='flex flex-col justify-center items-center gap-4'>
 							<h3 className='text-center text-5xl'>
-								Get 10 New Quote-Ready Leads
+								Get 5 New Quote-Ready Leads
 							</h3>
 							<p className='text-3xl text-primary'>
 								Within 30 Days, or You Don’t Pay
