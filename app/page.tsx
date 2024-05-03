@@ -159,7 +159,7 @@ export default function Home() {
 					}}
 					className='relative flex justify-center items-center w-full h-screen bg-no-repeat main-padding-x  bg-cover'>
 					<div className='absolute w-full h-full top-0 left-0 bg-black/80' />
-					<div className='flex flex-col justify-center items-center gap-12 w-full z-[2]'>
+					<div className='flex flex-col justify-center items-center gap-12 w-full text-center z-[2]'>
 						<div className='flex flex-col justify-center items-center gap-4'>
 							<h3 className='text-center text-5xl'>
 								Get 10 New Quote-Ready Leads
@@ -175,7 +175,7 @@ export default function Home() {
 				</div>
 			</section>
 			<Section id='section-trust-bades'>
-				<div className='flex justify-center items-center flex-wrap gap-24 w-full h-fit pb-36'>
+				<div className='flex justify-center items-center flex-wrap gap-24 w-full h-fit pb-16'>
 					<div className='flex flex-col justify-center items-center gap-4'>
 						<Image
 							alt='Industry Specialist badge'

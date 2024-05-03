@@ -11,11 +11,11 @@
 		--accent: 197 85% 40%;
 	}
 	.dark {
-		--text: 196 87% 94%;
-		--background: 195 80% 2%;
+		--text: 196 87% 6%;
+		--background: 195 80% 98%;
 		--primary: 197 85% 50%;
-		--secondary: 197 84% 20%;
-		--accent: 197 85% 60%;
+		--secondary: 197 84% 80%;
+		--accent: 197 85% 40%;
 	}
 
 	.main-padding-x {

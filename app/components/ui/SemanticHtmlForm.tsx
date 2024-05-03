@@ -1,6 +1,7 @@
 'use client';
 import React, { ReactNode, useState } from 'react';
 import axios from 'axios';
+import { PulseLoader } from 'react-spinners';
 
 type Props = {};
 
@@ -11,7 +12,10 @@ export default function SemanticHtmlForm({}: Props) {
 		email: '',
 		phone: '',
 	});
-	const [loading, setLoading] = useState({
+	const [loading, setLoading] = useState<{
+		state: boolean;
+		message: string | ReactNode;
+	}>({
 		state: false,
 		message: 'Send',
 	});
@@ -27,7 +31,10 @@ export default function SemanticHtmlForm({}: Props) {
 	const handleFormSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		// Implement your form submission logic here
-		setLoading({ state: true, message: 'Loading' });
+		setLoading({
+			state: true,
+			message: <PulseLoader color='#ffff' />,
+		});
 		console.log(formData);
 		try {
 			const data = await axios.post(
@@ -68,7 +75,7 @@ export default function SemanticHtmlForm({}: Props) {
 					onChange={handleChange}
 					placeholder='Enter your full name'
 					required
-					className='p-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
+					className='p-3 mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-text/50 text-text'
 				/>
 			</div>
 			<div>
@@ -84,7 +91,7 @@ export default function SemanticHtmlForm({}: Props) {
 					value={formData.website}
 					onChange={handleChange}
 					placeholder='Enter your website URL'
-					className='p-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
+					className='p-3 mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-text/50 text-text'
 				/>
 			</div>
 			<div>
@@ -101,7 +108,7 @@ export default function SemanticHtmlForm({}: Props) {
 					onChange={handleChange}
 					placeholder='Enter your email address'
 					required
-					className='p-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
+					className='p-3 mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-text/50 text-text'
 				/>
 			</div>
 			<div>
@@ -118,7 +125,7 @@ export default function SemanticHtmlForm({}: Props) {
 					onChange={handleChange}
 					placeholder='Enter your phone number'
 					required
-					className='p-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500'
+					className='p-3 mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-text/50 text-text'
 				/>
 			</div>
 			<div>
