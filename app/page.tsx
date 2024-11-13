@@ -22,7 +22,7 @@ import SemanticHtmlForm from './components/ui/SemanticHtmlForm';
 export const metadata: Metadata = {
 	metadataBase: new URL(SEO_DEFAULT_VALUES.base_url),
 	title: `${SEO_DEFAULT_VALUES.brand_name} - Effortless Home Improvement Growth`,
-	description: `At ${SEO_DEFAULT_VALUES.brand_name} we simplify growth for home improvement businesses. We provide high-quality leads, freeing you from the heavy lifting.`,
+	description: `At ${SEO_DEFAULT_VALUES.brand_name} we simplify growth for home improvement businesses. We provide high-quality clients, freeing you from the heavy lifting. You get profitable results or you don't pay!`,
 	verification: {
 		google: SEO_DEFAULT_VALUES.verification.google_search_console,
 	},

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'sigma_brand_logo';
-  src: url('../font/sigma_brand_logo.eot?24917094');
-  src: url('../font/sigma_brand_logo.eot?24917094#iefix') format('embedded-opentype'),
-       url('../font/sigma_brand_logo.woff2?24917094') format('woff2'),
-       url('../font/sigma_brand_logo.woff?24917094') format('woff'),
-       url('../font/sigma_brand_logo.ttf?24917094') format('truetype'),
-       url('../font/sigma_brand_logo.svg?24917094#sigma_brand_logo') format('svg');
+  src: url('../font/sigma_brand_logo.eot?61795894');
+  src: url('../font/sigma_brand_logo.eot?61795894#iefix') format('embedded-opentype'),
+       url('../font/sigma_brand_logo.woff2?61795894') format('woff2'),
+       url('../font/sigma_brand_logo.woff?61795894') format('woff'),
+       url('../font/sigma_brand_logo.ttf?61795894') format('truetype'),
+       url('../font/sigma_brand_logo.svg?61795894#sigma_brand_logo') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'sigma_brand_logo';
-    src: url('../font/sigma_brand_logo.svg?24917094#sigma_brand_logo') format('svg');
+    src: url('../font/sigma_brand_logo.svg?61795894#sigma_brand_logo') format('svg');
   }
 }
 */

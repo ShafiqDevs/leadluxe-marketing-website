@@ -115,7 +115,7 @@ export default function RootLayout({
 							</span>
 						</div>
 						<span className='text-xs font-light'>
-							© 2024 sigmamarketing.co.uk All rights reserved.
+							© 2024 LeadLuxe All rights reserved.
 						</span>
 					</footer>
 
